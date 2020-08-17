@@ -131,7 +131,7 @@
                                     </div><!-- .popup__menu -->
                                 </div><!-- .popup__content -->
                                 <div class="popup__button popup__box">
-                                    <a class="btn" href="/job/post">
+                                    <a class="btn" href="https://find.doclike.fr/">
                                         <i class="la la-plus la-24"></i>
                                         <span>{{__('Job Post')}}</span>
                                     </a>
@@ -345,7 +345,7 @@
                             </a>
                         </div>
                         <div class="right-header__button btn">
-                            <a title="Add place" href="/job/post">
+                            <a title="Add place" href="https://find.doclike.fr/">
                                 <i class="la la-plus la-24"></i>
                                 <span>{{__('Job Post')}}</span>
                             </a>

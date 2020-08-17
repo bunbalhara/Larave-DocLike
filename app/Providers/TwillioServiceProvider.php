@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Broadcasters\SyncBroadcaster;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;
 
@@ -34,6 +35,8 @@ class TwillioServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Broadcast::extend('sync', function ($app){
+           return new SyncBroadcaster($app->make('sync'));
+        });
     }
 }
