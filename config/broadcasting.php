@@ -53,9 +53,7 @@ return [
         'null' => [
             'driver' => 'null',
         ],
-        'sync'=>[
-            'driver'=>'sync'
-        ]
+
     ],
 
 ];

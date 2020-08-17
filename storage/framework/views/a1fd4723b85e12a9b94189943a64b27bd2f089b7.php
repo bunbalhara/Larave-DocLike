@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<?php echo e(app()->getLocale()); ?>">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <?php echo SEO::generate(); ?>
@@ -29,49 +29,21 @@
         <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/custom.css?v=1.0')); ?>"/>
     <?php endif; ?>
 
-    <link href="<?php echo e(mix('/css/app.css')); ?>" rel="stylesheet">
-    <style>
-        #app *{
-            font-family: 'Open Sans', sans-serif !important;;
-        }
-    </style>
     <link rel="icon" sizes="16x16" href="<?php echo e(asset('assets/images/favicon.png')); ?>">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>"/>
     <script>
         var app_url = window.location.origin;
     </script>
-    <style>
-
-        @media  screen and (max-width: 1024px){
-            .site-header{
-                position: fixed;
-                height: 60px;
-                top: 0;
-                background-color: white!important;
-                width: 100%!important;
-                padding: 5px 0;
-                display: flex;
-                align-items: center;
-                z-index: 10!important;
-            }
-            .site__brand__logo img{
-                height: 25px;
-                margin-bottom: 5px;
-                margin-right: 10px;
-            }
-            #app{
-                margin-top: 60px;
-            }
-        }
-    </style>
     <?php echo $__env->yieldPushContent('style'); ?>
+    <?php echo $__env->yieldContent('style'); ?>
 </head>
-<body dir="<?php echo e(!setting('style_rtl') ?: 'rtl'); ?>" style="overflow-x: hidden">
+
+<body dir="<?php echo e(!setting('style_rtl') ?: 'rtl'); ?>">
 <div id="wrapper">
     <header id="header" class="site-header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2 col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-end">
+                <div class="col-md-6 col-8">
                     <div class="site">
                         <div class="site__menu">
                             <a title="Menu Icon" href="#" class="site__menu__icon">
@@ -93,10 +65,10 @@
                                             <a href="#" title="<?php echo e(Auth::user()->name); ?>">
                                                 <img src="<?php echo e(getUserAvatar(user()->avatar)); ?>" alt="<?php echo e(Auth::user()->name); ?>">
                                                 <span>
-                                                        <?php echo e(Auth::user()->name); ?>
+                                                    <?php echo e(Auth::user()->name); ?>
 
-                                                        <i class="la la-angle-down la-12"></i>
-                                                    </span>
+                                                    <i class="la la-angle-down la-12"></i>
+                                                </span>
                                             </a>
                                             <div class="account-sub">
                                                 <ul>
@@ -160,8 +132,18 @@
                                         </ul>
                                     </div><!-- .popup__menu -->
                                 </div><!-- .popup__content -->
+                                <div class="popup__button popup__box">
+                                    <a class="btn" href="https://find.doclike.fr/">
+                                        <i class="la la-plus la-24"></i>
+                                        <span><?php echo e(__('Job Post')); ?></span>
+                                    </a>
+                                </div><!-- .popup__button -->
                             </div><!-- .popup -->
                         </div><!-- .site__menu -->
+                        <div class="site__brand">
+                            <a title="Logo" href="<?php echo e(route('home')); ?>" class="site__brand__logo"><img src="<?php echo e(asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')); ?>" alt="logo"></a>
+                        </div><!-- .site__brand -->
+
                         <?php if (! (isRoute('home'))): ?>
                             <?php if(setting('template', '01') == '01'): ?>
                                 <div class="site__search golo-ajax-search">
@@ -172,31 +154,58 @@
                                     </a><!-- .search__close -->
                                     <form action="<?php echo e(route('search')); ?>" class="site__search__form" method="GET">
                                         <div class="site__search__field">
-                                        <span class="site__search__icon">
-                                            <i class="la la-search la-24"></i>
-                                        </span><!-- .site__search__icon -->
+                                    <span class="site__search__icon">
+                                        <i class="la la-search la-24"></i>
+                                    </span><!-- .site__search__icon -->
                                             <input class="site__search__input" type="text" name="keyword" placeholder="<?php echo e(__('Search places ...')); ?>" autocomplete="off">
                                             <div class="search-result"></div>
                                             <div class="golo-loading-effect"><span class="golo-loading"></span></div>
                                         </div><!-- .search__input -->
                                     </form><!-- .search__form -->
                                 </div><!-- .site__search -->
+                            <?php else: ?>
+                                <div class="site__search layout-02">
+                                    <a title="Close" href="#" class="search__close">
+                                        <i class="la la-times"></i>
+                                    </a><!-- .search__close -->
+                                    <form action="<?php echo e(route('page_search_listing')); ?>" class="site-banner__search layout-02">
+                                        <div class="field-input">
+                                            <label for="input_search"><?php echo e(__('Find')); ?></label>
+                                            <input class="site-banner__search__input open-suggestion" id="input_search" type="text" name="keyword" placeholder="Ex: Dentiste, kyné" autocomplete="off">
+                                            <input type="hidden" name="category[]" id="category_id">
+                                            <div class="search-suggestions category-suggestion">
+                                                <ul>
+                                                    <li><a href="#"><span><?php echo e(__('Loading...')); ?></span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .site-banner__search__input -->
+                                        <div class="field-input">
+                                            <label for="location_search"><?php echo e(__('Where')); ?></label>
+                                            <input class="site-banner__search__input open-suggestion" id="location_search" type="text" name="city_name" placeholder="Your city" autocomplete="off">
+                                            <input type="hidden" id="city_id">
+                                            <div class="search-suggestions location-suggestion">
+                                                <ul>
+                                                    <li><a href="#"><span><?php echo e(__('Loading...')); ?></span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .site-banner__search__input -->
+                                        <div class="field-submit">
+                                            <button><i class="las la-search la-24-black"></i></button>
+                                        </div>
+                                    </form><!-- .site-banner__search -->
+                                </div>
                             <?php endif; ?>
                         <?php endif; ?>
+
                     </div><!-- .site -->
                 </div><!-- .col-md-6 -->
 
-                <div class="col-8 col-md-2 d-flex justify-content-center justify-content-lg-start">
-                    <div class="site__brand">
-                        <a title="Logo" href="<?php echo e(route('home')); ?>" class="site__brand__logo"><img src="<?php echo e(asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')); ?>" alt="logo"></a>
-                    </div><!-- .site__brand -->
-                </div>
 
-                <div class="col-2 col-md-8 col-lg-9 d-flex flex-row justify-content-end">
+                <div class="col-md-6 col-4">
                     <div class="right-header align-right">
                         <div class="right-header__languages">
-                            <a href="#" style="white-space: nowrap">
-                                <img src="<?php echo e(asset('assets/images/flags/'.app()->getLocale().'.png')); ?>" alt="locale-flag">
+                            <a href="#">
+                                <img src="<?php echo e(flagImageUrl(\Illuminate\Support\Facades\App::getLocale())); ?>">
                                 <?php if(count($languages) > 1): ?>
                                     <i class="las la-angle-down la-12-black"></i>
                                 <?php endif; ?>
@@ -205,7 +214,7 @@
                                 <ul>
                                     <?php $__currentLoopData = $languages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <?php if(\Illuminate\Support\Facades\App::getLocale() !== $language->code): ?>
-                                            <li><a href="<?php echo e(url('/locale/'.$language->code)); ?>" title="<?php echo e($language->name); ?>"><img src="<?php echo e(flagImageUrl($language->code)); ?>"><?php echo e($language->name); ?></a></li>
+                                            <li><a href="<?php echo e(route('change_language', $language->code)); ?>" title="<?php echo e($language->name); ?>"><img src="<?php echo e(flagImageUrl($language->code)); ?>"><?php echo e($language->name); ?></a></li>
                                         <?php endif; ?>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </ul>
@@ -284,10 +293,10 @@
                                                 <input type="checkbox" id="accept" checked required>
                                                 Accept the <a title="Terms" href="#">Terms</a> and <a title="Privacy Policy" href="#">Privacy Policy</a>
                                                 <span class="checkmark">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6">
-                                                        <path fill="#FFF" fill-rule="nonzero" d="M2.166 4.444L.768 3.047 0 3.815 1.844 5.66l.002-.002.337.337L7.389.788 6.605.005z"/>
-                                                    </svg>
-                                                </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6">
+                                                    <path fill="#FFF" fill-rule="nonzero" d="M2.166 4.444L.768 3.047 0 3.815 1.844 5.66l.002-.002.337.337L7.389.788 6.605.005z"/>
+                                                </svg>
+                                            </span>
                                             </label>
                                         </div>
                                         <button type="submit" class="gl-button btn button w-100" id="submit_register"><?php echo e(__('Sign Up')); ?></button>
@@ -311,10 +320,10 @@
                                 <a href="#" title="<?php echo e(Auth::user()->name); ?>">
                                     <img src="<?php echo e(getUserAvatar(user()->avatar)); ?>" alt="<?php echo e(Auth::user()->name); ?>">
                                     <span>
-                                            <?php echo e(Auth::user()->name); ?>
+										<?php echo e(Auth::user()->name); ?>
 
-                                            <i class="la la-angle-down la-12"></i>
-                                        </span>
+										<i class="la la-angle-down la-12"></i>
+									</span>
                                 </a>
                                 <div class="account-sub">
                                     <ul>
@@ -326,7 +335,7 @@
                                         <li class="<?php echo e(isActiveMenu('user_wishlist')); ?>"><a href="<?php echo e(route('user_wishlist')); ?>"><?php echo e(__('Wishlist')); ?></a></li>
                                         <li>
                                             <a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><?php echo e(__('Logout')); ?></a>
-                                            <form class="d-none" action="<?php echo e(route('logout')); ?>" method="POST">
+                                            <form class="d-none" id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST">
                                                 <?php echo csrf_field(); ?>
                                             </form>
                                         </li>
@@ -334,6 +343,17 @@
                                 </div>
                             </div><!-- .account -->
                         <?php endif; ?>
+                        <div class="right-header__search">
+                            <a title="Search" href="#" class="search-open">
+                                <i class="la la-search la-24"></i>
+                            </a>
+                        </div>
+                        <div class="right-header__button btn">
+                            <a title="Add place" href="https://find.doclike.fr/">
+                                <i class="la la-plus la-24"></i>
+                                <span><?php echo e(__('Job Post')); ?></span>
+                            </a>
+                        </div><!-- .right-header__button -->
                     </div><!-- .right-header -->
                 </div><!-- .col-md-6 -->
             </div><!-- .row -->
@@ -341,7 +361,9 @@
 
         </div><!-- .container-fluid -->
     </header><!-- .site-header -->
+
     <?php echo $__env->yieldContent('main'); ?>
+
     <footer id="footer" class="footer">
         <div class="container">
             <div class="footer__top">
@@ -432,20 +454,10 @@
 <!-- orther script -->
 <script src="<?php echo e(asset('assets/js/main.js?v=1.4')); ?>"></script>
 <script src="<?php echo e(asset('assets/js/custom.js?v=1.4')); ?>"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcJ5DVBnqF-t-q2jeyX-2FE-TDf42rE5s&libraries=places"></script>
-<script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo e(setting('goolge_map_api_key', 'AIzaSyAcJ5DVBnqF-t-q2jeyX-2FE-TDf42rE5s')); ?>&libraries=places&language=<?php echo e(\Illuminate\Support\Facades\App::getLocale()); ?>"></script>
 
-    window.Laravel = {
-        csrfToken:'<?php echo e(csrf_token()); ?>',
-        apiToken:'<?php echo e($api_token??null); ?>',
-        appointmentToken:'<?php echo e($token??null); ?>',
-        production:'<?php echo e(env('PRODUCTION')?true:false); ?>',
-        locale:'<?php echo e(app()->getLocale()); ?>'
-    }
-
-</script>
-<script src="<?php echo e(asset('/js/app.js?'.time())); ?>"></script>
 <?php echo $__env->yieldPushContent('scripts'); ?>
+
 </body>
 </html>
-<?php /**PATH E:\xampp\htdocs\doclike\resources\views/frontend/layouts/find.blade.php ENDPATH**/ ?>
+<?php /**PATH E:\xampp\htdocs\doclike\resources\views/frontend/layouts/main.blade.php ENDPATH**/ ?>
