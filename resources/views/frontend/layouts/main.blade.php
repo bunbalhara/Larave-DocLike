@@ -36,6 +36,7 @@
     </script>
     @stack('style')
     @yield('style')
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 </head>
 
 <body dir="{{!setting('style_rtl') ?: 'rtl'}}">
@@ -120,45 +121,10 @@
                         </div><!-- .site__menu -->
 
                         <div class="logo-container">
-                            <a title="Logo" href="{{route('home')}}" class="site__brand__logo"><img src="{{asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')}}" alt="logo"></a>
-                        </div><!-- .site__brand -->
-
-                        @unless(isRoute('home'))
-                            <div class="site__search layout-02">
-                                <a title="Close" href="#" class="search__close">
-                                    <i class="la la-times"></i>
-                                </a><!-- .search__close -->
-                                <form action="{{route('page_search_listing')}}" class="site-banner__search layout-02">
-                                    <div class="field-input">
-                                        <label for="input_search">{{__('Find')}}</label>
-                                        <input class="site-banner__search__input open-suggestion" id="input_search" type="text" name="keyword" placeholder="Ex: Dentiste, kyné" autocomplete="off">
-                                        <input type="hidden" name="category[]" id="category_id">
-                                        <div class="search-suggestions category-suggestion">
-                                            <ul>
-                                                <li><a href="#"><span>{{__('Loading...')}}</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- .site-banner__search__input -->
-                                    <div class="field-input">
-                                        <label for="location_search">{{__('Where')}}</label>
-                                        <input class="site-banner__search__input open-suggestion" id="location_search" type="text" name="city_name" placeholder="Your city" autocomplete="off">
-                                        <input type="hidden" id="city_id">
-                                        <div class="search-suggestions location-suggestion">
-                                            <ul>
-                                                <li><a href="#"><span>{{__('Loading...')}}</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- .site-banner__search__input -->
-                                    <div class="field-submit">
-                                        <button><i class="las la-search la-24-black"></i></button>
-                                    </div>
-                                </form><!-- .site-banner__search -->
-                            </div>
-                        @endunless
-
-                    </div><!-- .site -->
-                </div><!-- .col-md-6 -->
-
+                            @include('frontend.include.logo')
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-6 col-4">
                     <div class="right-header align-right">
@@ -296,94 +262,17 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div><!-- .account -->
+                            </div>
                         @endguest
-                        <div class="right-header__button btn">
-                            <a title="Add place" href="https://find.doclike.fr/" class="flex-center">
-                                <i class="la la-plus" style="font-size: 20px"></i>
-                                <span>{{__('Find a doctor')}}</span>
-                            </a>
-                        </div><!-- .right-header__button -->
-                    </div><!-- .right-header -->
-                </div><!-- .col-md-6 -->
-            </div><!-- .row -->
-        </div><!-- .container-fluid -->
-    </header><!-- .site-header -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     @yield('main')
 
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="footer__top__info">
-                            <a title="Logo" href="#" class="footer__top__info__logo"><img src="{{asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')}}" alt="logo"></a>
-                            <p class="footer__top__info__desc">{{__('Discover amazing things to do everywhere you go.')}}</p>
-                            <div class="footer__top__info__app">
-                                <a title="App Store" href="#" class="banner-apps__download__iphone"><img src="{{asset('assets/images/assets/app-store.png')}}" alt="App Store"></a>
-                                <a title="Google Play" href="#" class="banner-apps__download__android"><img src="{{asset('assets/images/assets/google-play.png')}}" alt="Google Play"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <aside class="footer__top__nav">
-                            <h3>{{__('Company')}}</h3>
-                            <ul>
-                                <li><a href="{{url('post/about-us-10')}}">{{__('About Us')}}</a></li>
-                                <li><a href="{{route('post_list_all')}}">{{__('Blog')}}</a></li>
-                                <li><a href="">{{__('Faqs')}}</a></li>
-                                <li><a href="{{route('page_contact')}}">{{__('Contact')}}</a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-lg-2">
-                        <aside class="footer__top__nav">
-                            <h3>{{__('Support')}}</h3>
-                            <ul>
-                                <li><a href="#">Get in Touch</a></li>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Live chat</a></li>
-                                <li><a href="#">How it works</a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-lg-3">
-                        <aside class="footer__top__nav footer__top__nav--contact">
-                            <h3>{{__('Contact Us')}}</h3>
-                            <p>{{__('Email: support@doclike.fr')}}</p>
-                            <p>{{__('Phone: 1 (00) 832 2342')}}</p>
-                            <ul>
-                                <li>
-                                    <a title="Facebook" href="#">
-                                        <i class="la la-facebook la-24"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Twitter" href="#">
-                                        <i class="la la-twitter la-24"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Youtube" href="#">
-                                        <i class="la la-youtube la-24"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Instagram" href="#">
-                                        <i class="la la-instagram la-24"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </aside>
-                    </div>
-                </div>
-            </div><!-- .top-footer -->
-            <div class="footer__bottom">
-                <p class="footer__bottom__copyright">{{now()->year}} &copy; <a href="{{__('https://doclike.fr')}}" target="_blank">{{__("Doclike powered by Hannapp's")}}</a>. {{__('All rights reserved.')}}</p>
-            </div><!-- .top-footer -->
-        </div><!-- .container -->
-    </footer><!-- site-footer -->
+    @include('frontend.include.footer')
 </div><!-- #wrapper -->
 <!-- jQuery -->
 <script src="{{asset('assets/libs/jquery-1.12.4.js')}}"></script>

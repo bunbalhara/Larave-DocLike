@@ -3,7 +3,6 @@ import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
 } from 'react-places-autocomplete';
-
 import RoomIcon from '@material-ui/icons/Room';
 import {useDispatch, useSelector} from "react-redux";
 import {SET_JOB_POST_LOCATION} from "../../../actions/type";

@@ -74,6 +74,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     @stack('style')
 </head>
 <body dir="{{!setting('style_rtl') ?: 'rtl'}}" style="overflow-x: hidden">
@@ -150,33 +151,12 @@
                                 </div><!-- .popup__content -->
                             </div><!-- .popup -->
                         </div><!-- .site__menu -->
-                        @unless(isRoute('home'))
-                            @if(setting('template', '01') == '01')
-                                <div class="site__search golo-ajax-search">
-                                    <a title="Close" href="#" class="search__close">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path fill="#5D5D5D" fill-rule="nonzero" d="M9.3 8.302l6.157-6.156a.706.706 0 1 0-.999-.999L8.302 7.304 2.146 1.148a.706.706 0 1 0-.999.999l6.157 6.156-6.156 6.155a.706.706 0 0 0 .998.999L8.302 9.3l6.156 6.156a.706.706 0 1 0 .998-.999L9.301 8.302z"/>
-                                        </svg>
-                                    </a><!-- .search__close -->
-                                    <form action="{{route('search')}}" class="site__search__form" method="GET">
-                                        <div class="site__search__field">
-                                        <span class="site__search__icon">
-                                            <i class="la la-search la-24"></i>
-                                        </span><!-- .site__search__icon -->
-                                            <input class="site__search__input" type="text" name="keyword" placeholder="{{__('Search places ...')}}" autocomplete="off">
-                                            <div class="search-result"></div>
-                                            <div class="golo-loading-effect"><span class="golo-loading"></span></div>
-                                        </div><!-- .search__input -->
-                                    </form><!-- .search__form -->
-                                </div><!-- .site__search -->
-                            @endif
-                        @endunless
                     </div><!-- .site -->
                 </div><!-- .col-md-6 -->
 
                 <div class="col-8 col-md-2 d-flex justify-content-center justify-content-lg-start">
                     <div class="logo-container">
-                        <a title="Logo" href="{{route('home')}}" class="site__brand__logo"><img src="{{asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')}}" alt="logo"></a>
+                        @include('frontend.include.logo')
                     </div><!-- .site__brand -->
                 </div>
 
@@ -326,78 +306,8 @@
         </div><!-- .container-fluid -->
     </header><!-- .site-header -->
     @yield('main')
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="footer__top__info">
-                            <a title="Logo" href="#" class="footer__top__info__logo"><img src="{{asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')}}" alt="logo"></a>
-                            <p class="footer__top__info__desc">{{__('Discover amazing things to do everywhere you go.')}}</p>
-                            <div class="footer__top__info__app">
-                                <a title="App Store" href="#" class="banner-apps__download__iphone"><img src="{{asset('assets/images/assets/app-store.png')}}" alt="App Store"></a>
-                                <a title="Google Play" href="#" class="banner-apps__download__android"><img src="{{asset('assets/images/assets/google-play.png')}}" alt="Google Play"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <aside class="footer__top__nav">
-                            <h3>{{__('Company')}}</h3>
-                            <ul>
-                                <li><a href="{{url('post/about-us-10')}}">{{__('About Us')}}</a></li>
-                                <li><a href="{{route('post_list_all')}}">{{__('Blog')}}</a></li>
-                                <li><a href="">{{__('Faqs')}}</a></li>
-                                <li><a href="{{route('page_contact')}}">{{__('Contact')}}</a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-lg-2">
-                        <aside class="footer__top__nav">
-                            <h3>{{__('Support')}}</h3>
-                            <ul>
-                                <li><a href="#">Get in Touch</a></li>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Live chat</a></li>
-                                <li><a href="#">How it works</a></li>
-                            </ul>
-                        </aside>
-                    </div>
-                    <div class="col-lg-3">
-                        <aside class="footer__top__nav footer__top__nav--contact">
-                            <h3>{{__('Contact Us')}}</h3>
-                            <p>{{__('Email: support@doclike.fr')}}</p>
-                            <p>{{__('Phone: 1 (00) 832 2342')}}</p>
-                            <ul>
-                                <li>
-                                    <a title="Facebook" href="#">
-                                        <i class="la la-facebook la-24"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Twitter" href="#">
-                                        <i class="la la-twitter la-24"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Youtube" href="#">
-                                        <i class="la la-youtube la-24"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Instagram" href="#">
-                                        <i class="la la-instagram la-24"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </aside>
-                    </div>
-                </div>
-            </div><!-- .top-footer -->
-            <div class="footer__bottom">
-                <p class="footer__bottom__copyright">{{now()->year}} &copy; <a href="{{__('https://doclike.fr')}}" target="_blank">{{__("Doclike powered by Hannapp's")}}</a>. {{__('All rights reserved.')}}</p>
-            </div><!-- .top-footer -->
-        </div><!-- .container -->
-    </footer><!-- site-footer -->
+
+    @include('frontend.include.footer')
 </div><!-- #wrapper -->
 <!-- jQuery -->
 <script src="{{asset('assets/libs/jquery-1.12.4.js')}}"></script>

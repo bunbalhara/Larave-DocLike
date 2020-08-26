@@ -45,6 +45,7 @@ const ProgressItem = ({image, text, icon, color, backgroundColor}) =>(
 )
 
 export const PostProgressBar = () => {
+    const local = useSelector(state=>state.app.locale)
     const testRef = useRef(null);
     const dispatch = useDispatch()
     const scrollRef = useRef(null);
@@ -103,7 +104,7 @@ export const PostProgressBar = () => {
                     ref={scrollRef}
                 >
                     <div className='progress-item'>
-                        <img  className='flag' src={assets('flags/fr.png')} alt='flag'/>
+                        <img  className='flag' src={assets(`flags/${local}.png`)} alt='flag'/>
                     </div>
                     {
                         post.method &&

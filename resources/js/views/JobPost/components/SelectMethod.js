@@ -5,6 +5,7 @@ import LocalizedStrings from 'react-localization';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import $ from 'jquery';
 
 let strings = new LocalizedStrings({
     en:{
@@ -24,7 +25,7 @@ const settings = {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 5000,
-    initialSlide: 0,
+    initialSlide: 0.7,
     className: "slides",
     rows: 1,
     centerPadding: "60px",
@@ -41,9 +42,9 @@ const settings = {
         {
             breakpoint: 900,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
+                slidesToShow: 2.3,
+                slidesToScroll:1,
+                dots: true
             }
         },
     ]
@@ -54,6 +55,7 @@ const MethodItem = ({item, active})=>{
     const dispatch = useDispatch();
 
     const selectItem = () => {
+        $('html, body').animate({scrollTop: 0})
         dispatch(selectPostMethod(item))
     }
 
@@ -64,8 +66,9 @@ const MethodItem = ({item, active})=>{
             style={{
                 backgroundColor:'#8080807f',
                 width: 'calc(100% - 10px)',
-                height:350,
-                maxWidth: 250,
+                height:'25vw',
+                minHeight:250,
+                maxWidth: 300,
                 borderRadius: 10,
                 borderStyle:'solid',
                 borderWidth: 0.5,

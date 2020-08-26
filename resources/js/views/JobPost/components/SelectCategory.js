@@ -6,13 +6,14 @@ import SearchIcon from '@material-ui/icons/Search';
 import {SET_JOB_POST_CATEGORY} from "../../../actions/type";
 import {Hidden} from "@material-ui/core";
 import {JOB_POST_NEXT} from "../../../actions";
-
+import $ from 'jquery'
 const CategoryITem = ({item, active})=>{
 
     const dispatch = useDispatch();
     const activeStep = useSelector(state=>state.jobPost.activeStep);
 
     const setCategory = () =>{
+        $('html, body').animate({scrollTop: 0})
         dispatch({type: SET_JOB_POST_CATEGORY, payload: item})
         dispatch({type: JOB_POST_NEXT, payload:{activeStep: activeStep + 1}})
     }

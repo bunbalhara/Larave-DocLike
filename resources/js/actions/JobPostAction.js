@@ -12,11 +12,14 @@ import {
     GET_OFFERS_SUCCESS,
     GET_OFFERS_FAILURE,
 } from "./type";
+import $ from 'jquery';
+
 const api = new Api();
 export const JOB_POST_NEXT = 'JOB_POST_NEXT';
 export const JOB_POST_BACK = 'JOB_POST_BACK';
 export const SELECT_POST_METHOD = 'SELECT_POST_METHOD';
 export const SET_ALL_CATEGORIES = 'SET_ALL_CATEGORIES';
+
 
 export const postRequest = () => async (dispatch, getState) => {
     const state = getState();
@@ -109,6 +112,8 @@ export const jobPostNext = () => async (dispatch, getState) => {
     const state = getState();
     const post = state.jobPost.post;
     const activeStep = state.jobPost.activeStep;
+
+    $('html, body').animate({scrollTop: 0})
 
     if(activeStep === 2 && post.address.address === ''){
         dispatch({type:SET_JOB_POST_ERROR, payload:{error: true, errorText:'Please Select a Location'}})

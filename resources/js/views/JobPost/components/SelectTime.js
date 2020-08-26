@@ -4,7 +4,7 @@ import {assets} from "../../../helpers";
 import {SET_JOB_POST_TIME,SET_JOB_POST_DATE} from "../../../actions/type";
 import DatePicker from 'react-custom-date-picker';
 import {JOB_POST_NEXT} from "../../../actions";
-
+import $ from 'jquery'
 const SelectDatePickerItem = ({text}) => {
     const dispatch = useDispatch();
     const dateTime = useSelector(state=>state.jobPost.post.dateTime)
@@ -153,6 +153,7 @@ export const SelectTime = () =>{
 
     useEffect(()=>{
         if(dateTime.date !== null && dateTime.time !== null){
+            $('html, body').animate({scrollTop: 0})
             dispatch({type: JOB_POST_NEXT, payload:{activeStep: activeStep + 1}})
         }
     }, [dateTime]);
