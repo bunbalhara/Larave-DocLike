@@ -14,7 +14,7 @@
                     <h1 class="title">{{__("Do not wait any longer at the Doctor")}}</h1>
                     <p class="description">{{__("Like a Dentist available in Paris this morning")}}</p>
                     <div class="pl-lg-5 pl-3">
-                        <a class="btn btn-danger rounded" href="#" style="background-color: #c44034">{{__("Find a doctor")}}</a>
+                        <a class="btn btn-danger rounded" href="https://find.doclike.fr" style="background-color: #c44034">{{__("Find a doctor")}}</a>
                     </div>
                 </div>
             </div>
