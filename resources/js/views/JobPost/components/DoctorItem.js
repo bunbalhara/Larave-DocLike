@@ -53,7 +53,7 @@ export const DoctorItem = (props) => {
             }}
         >
             <img
-                src={assets(doctor.avatar.replace('/assets/images/',''))}
+                src={assets(doctor.avatar.replace('/front/img/',''))}
                 style={{
                     width: '40%',
                     height:'auto',

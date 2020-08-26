@@ -77,11 +77,9 @@
                                     <div class="popup__destinations popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Destinations" href="#">{{__('Destinations')}}</a>
+                                                <a title="Destinations" href="#">France</a>
                                                 <ul class="sub-menu">
-                                                    @foreach($destinations as $city)
-                                                        <li><a href="{{route('page_search_listing', ['city[]' => $city->id])}}" title="{{$city->name}}">{{$city->name}}</a></li>
-                                                    @endforeach
+                                                    <li><a href="javascript:void(0)" title="France">France</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -347,7 +345,7 @@
                     <div class="col-lg-3">
                         <aside class="footer__top__nav footer__top__nav--contact">
                             <h3>{{__('Contact Us')}}</h3>
-                            <p>{{__('Email: support@domain.com')}}</p>
+                            <p>{{__('Email: support@doclike.fr')}}</p>
                             <p>{{__('Phone: 1 (00) 832 2342')}}</p>
                             <ul>
                                 <li>
@@ -376,7 +374,7 @@
                 </div>
             </div><!-- .top-footer -->
             <div class="footer__bottom">
-                <p class="footer__bottom__copyright">{{now()->year}} &copy; <a href="{{__('https://uxper.co')}}" target="_blank">{{__('UxPer')}}</a>. {{__('All rights reserved.')}}</p>
+                <p class="footer__bottom__copyright">{{now()->year}} &copy; <a href="{{__('https://doclike.fr')}}" target="_blank">{{__("Doclike powered by Hannapp's")}}</a>. {{__('All rights reserved.')}}</p>
             </div><!-- .top-footer -->
         </div><!-- .container -->
     </footer><!-- site-footer -->

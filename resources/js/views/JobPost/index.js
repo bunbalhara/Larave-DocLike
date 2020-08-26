@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {PostProgressBar, Content} from './components'
 import {useDispatch, useSelector} from "react-redux";
 import {
+    GET_OFFERS_SUCCESS,
     getAllCategories,
     getAppointment,
     getAuthUser,
@@ -19,18 +20,36 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {OffersList} from "./components/OffersList";
+import {SyncClient} from 'twilio-sync';
+const syncClient = new SyncClient(window.Laravel.twilioToken);
+
+const syncTwilioForOffers = (dispatch) =>{
+    syncClient.on('connectionStateChanged', function (state) {
+        console.log(state)
+        if (state === 'connected') {
+            syncClient.stream('appointment-accepted').then(function (stream) {
+                stream.on('messagePublished', function (args) {
+                    console.log(args)
+                    dispatch({type: GET_OFFERS_SUCCESS, payload: args.message.value.payload.offer})
+                });
+            });
+        }
+    });
+}
 
 export const JobPost = () => {
-
     const activeStep = useSelector(state=>state.jobPost.activeStep)
     const isError = useSelector(state=>state.jobPost.isError)
     const errorText = useSelector(state=>state.jobPost.errorText)
     const maxStep = useSelector(state=>state.jobPost.maxStep)
     const isShowMap = useSelector(state=>state.jobPost.isShowMap)
-    const offers = useSelector(state=>state.jobPost.offers)
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(true);
     const [map, setMap] = useState(null);
+
+    useEffect(()=>{
+        syncTwilioForOffers(dispatch);
+    },[]);
 
     useEffect(()=>{
         dispatch(getAllCategories(null))
@@ -124,7 +143,7 @@ export const JobPost = () => {
                         </div>
                     }
                     {
-                        offers && <OffersList map={map}/>
+                        activeStep === 9 && <OffersList map={map}/>
                     }
                     {
                         isShowMap &&

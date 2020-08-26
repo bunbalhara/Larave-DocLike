@@ -40,11 +40,10 @@ const Map = (props) => {
         setMap(map)
         props.setMap(map)
     };
-
-
+    console.log(activeStep);
     return (
         <GoogleMapReact
-            bootstrapURLKeys={{ key:'AIzaSyAcJ5DVBnqF-t-q2jeyX-2FE-TDf42rE5s' }}
+            bootstrapURLKeys={{ key:'AIzaSyAcJ5DVBnqF-t-q2jeyX-2FE-TDf42rE5s'}}
             defaultCenter={center}
             defaultZoom={zoom}
             center={center}

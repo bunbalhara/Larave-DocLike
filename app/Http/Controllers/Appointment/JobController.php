@@ -36,6 +36,7 @@ class JobController extends Controller
     public function savePost(Request $request){
 
         $email = $request->email;
+
         try{
 
             $appointment = Appointment::select('appointment.*','appointment_shift.*','appointment.id as id','appointment_shift.id as appointment_shift_id')
@@ -53,7 +54,9 @@ class JobController extends Controller
                         'appointment_id'=>$appointment->id
                     ]);
 
-                    $appointment->notify(new JobPosted());return response()->json([
+                    $appointment->notify(new JobPosted());
+
+                    return response()->json([
                         'status'=>1,
                         'appointment'=>$appointment,
                         'appointmentShift'=>$appointmentShift
@@ -73,13 +76,12 @@ class JobController extends Controller
             }
 
         }catch(\Exception $e){
-
             return response()->json($e);
-
         }
     }
 
     public function getAppointment(Request $request){
+
         $token = $request->token;
         try {
             if($token){

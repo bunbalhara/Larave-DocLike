@@ -37,6 +37,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapFindRoutes();
 
+        $this->mapBookRoutes();
+
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
@@ -73,8 +75,15 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapFindRoutes()
     {
-        Route::middleware('web')
+        Route::middleware('api')
             ->namespace($this->namespace)
             ->group(base_path('routes/find.php'));
+    }
+
+    protected function mapBookRoutes()
+    {
+        Route::middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/book.php'));
     }
 }

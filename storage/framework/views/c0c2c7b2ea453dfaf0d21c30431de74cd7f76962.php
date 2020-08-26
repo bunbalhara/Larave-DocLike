@@ -440,7 +440,8 @@
         apiToken:'<?php echo e($api_token??null); ?>',
         appointmentToken:'<?php echo e($token??null); ?>',
         production:'<?php echo e(env('PRODUCTION')?true:false); ?>',
-        locale:'<?php echo e(app()->getLocale()); ?>'
+        locale:'<?php echo e(app()->getLocale()); ?>',
+        twilioToken:'<?php echo e($twilioToken); ?>',
     }
 
 </script>

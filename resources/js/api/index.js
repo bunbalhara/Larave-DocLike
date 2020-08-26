@@ -4,6 +4,7 @@ const baseURL = window.Laravel.production?
     'https://find.doclike.fr/api/':
     'http://find.doclike.localhost/api/'
 
+
 axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
     'X-Requested-With': 'XMLHttpRequest',

@@ -91,6 +91,10 @@ export const postRequest = () => async (dispatch, getState) => {
     }
     const res = await api.submitPost(data)
     if(res.success){
+        let token = res.data.appointment.token;
+        if(token){
+            window.location.href='http://book.doclike.localhost?token='+token;
+        }
         dispatch({type: JOB_POST_NEXT, payload:{activeStep: 9}})
         dispatch({type: SET_JOB_POST_SHOW_MAP, payload: true})
         dispatch({type: SET_JOB_POST_APPOINTMENT, payload: res.data.appointment})
@@ -141,24 +145,24 @@ export const jobPostBack= (data) => async (dispatch, getState) => {
         if(activeStep === 2){
             dispatch({type: SET_JOB_POST_SHOW_MAP, payload: false})
             dispatch({type: SET_JOB_POST_LOCATION, payload: {address:'', location:null}})
-            dispatch({type: SELECT_POST_METHOD, payload: null})
+            // dispatch({type: SELECT_POST_METHOD, payload: null})
         }else if(activeStep === 3){
             dispatch({type: SET_JOB_POST_CATEGORY, payload: null})
-            dispatch({type: SELECT_POST_METHOD, payload: null})
+            // dispatch({type: SELECT_POST_METHOD, payload: null})
         }else if(activeStep === 4){
             dispatch({type: SET_JOB_POST_SUBCATEGORY, payload: null})
-            dispatch({type: SET_JOB_POST_CATEGORY, payload: null})
+            // dispatch({type: SET_JOB_POST_CATEGORY, payload: null})
         } else if(activeStep === 5){
             dispatch({type: SET_JOB_POST_DATE, payload: null})
             dispatch({type: SET_JOB_POST_TIME, payload: null})
-            dispatch({type: SET_JOB_POST_SUBCATEGORY, payload: null})
+            // dispatch({type: SET_JOB_POST_SUBCATEGORY, payload: null})
         }else if(activeStep === 6){
             dispatch({type: SET_JOB_POST_AGE, payload: ''})
-            dispatch({type: SET_JOB_POST_DATE, payload: null})
-            dispatch({type: SET_JOB_POST_TIME, payload: null})
+            // dispatch({type: SET_JOB_POST_DATE, payload: null})
+            // dispatch({type: SET_JOB_POST_TIME, payload: null})
         }else if(activeStep === 7){
             dispatch({type: SET_JOB_POST_CONTACT_DETAIL, payload: null})
-            dispatch({type: SET_JOB_POST_AGE, payload: ''})
+            // dispatch({type: SET_JOB_POST_AGE, payload: ''})
         }
 
         dispatch({type: JOB_POST_BACK, payload:{activeStep: activeStep - 1}})
@@ -192,7 +196,7 @@ export const getAppointment = (callBack) => async (dispatch) => {
         console.log(res.data)
         dispatch({type: SET_JOB_POST_APPOINTMENT, payload: res.data})
         if(res.data){
-            dispatch({type: JOB_POST_BACK, payload:{activeStep: 8}})
+            dispatch({type: JOB_POST_BACK, payload:{activeStep: 9}})
             dispatch({type: SET_JOB_POST_SHOW_MAP, payload: true})
         }
     }else {

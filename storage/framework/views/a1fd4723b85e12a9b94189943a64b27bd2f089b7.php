@@ -89,11 +89,9 @@
                                     <div class="popup__destinations popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Destinations" href="#"><?php echo e(__('Destinations')); ?></a>
+                                                <a title="Destinations" href="#">France</a>
                                                 <ul class="sub-menu">
-                                                    <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <li><a href="<?php echo e(route('city_detail', $city->slug)); ?>" title="<?php echo e($city->name); ?>"><?php echo e($city->name); ?></a></li>
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                    <li><a href="javascript:void(0)" title="France">France</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -223,7 +221,7 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                <?php echo e(__('Destinations')); ?>
+                                <?php echo e(__('Country')); ?>
 
                                 <i class="la la-angle-down la-12"></i>
                             </a>
@@ -432,7 +430,7 @@
                 </div>
             </div><!-- .top-footer -->
             <div class="footer__bottom">
-                <p class="footer__bottom__copyright"><?php echo e(now()->year); ?> &copy; <a href="<?php echo e(__('https://uxper.co')); ?>" target="_blank"><?php echo e(__('UxPer')); ?></a>. <?php echo e(__('All rights reserved.')); ?></p>
+                <p class="footer__bottom__copyright"><?php echo e(now()->year); ?> &copy; <a href="<?php echo e(__('https://doclike.fr')); ?>" target="_blank"><?php echo e(__("Doclike powered by Hannapp's")); ?></a>. <?php echo e(__('All rights reserved.')); ?></p>
             </div><!-- .top-footer -->
         </div><!-- .container -->
     </footer><!-- site-footer -->

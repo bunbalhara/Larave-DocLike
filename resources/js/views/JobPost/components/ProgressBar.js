@@ -124,9 +124,9 @@ export const PostProgressBar = () => {
                     {
                         post.category &&
                         <ProgressItem
-                            color={post.category.color}
-                            image={post.category.image}
-                            text={post.category.name}
+                            color={post.category?.color}
+                            image={post.category?.image}
+                            text={post.category?.name}
                             backgroundColor={'#e9a233'}
                         />
                     }
@@ -134,7 +134,7 @@ export const PostProgressBar = () => {
                         post.subcategory &&
                         <ProgressItem
                             image={null}
-                            text={post.subcategory.name}
+                            text={post.subcategory?.name}
                             backgroundColor={'#c9c9c9'}
                         />
                     }
@@ -183,14 +183,14 @@ export const PostProgressBar = () => {
                         backgroundColor={'#c44034'}
                     />
                     <ProgressItem
-                        color={appointment.category.color}
-                        image={appointment.category.image}
-                        text={appointment.category.name}
+                        color={appointment.category?.color}
+                        image={appointment.category?.image}
+                        text={appointment.category?.name}
                         backgroundColor={'#e9a233'}
                     />
                     <ProgressItem
                         image={null}
-                        text={appointment.subcategory.name}
+                        text={appointment.subcategory?.name}
                         backgroundColor={'#c9c9c9'}
                     />
                     <ProgressItem
@@ -200,7 +200,7 @@ export const PostProgressBar = () => {
                     />
                     <ProgressItem
                         image={null}
-                        text={appointment.age}
+                        text={appointment?.age}
                         backgroundColor={'#c9c9c9'}
                     />
 
