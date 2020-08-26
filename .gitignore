@@ -12,7 +12,7 @@ yarn-error.log
 /vendor
 /public/uploads/
 /.idea
-/storage/framework/cache
-/storage/framework/sessions
-/storage/framework/views
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
 /develop.md
