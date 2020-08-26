@@ -136,7 +136,7 @@
                                     <div class="popup__menu popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Home demo" href="/">{{__("Home")}}</a>
+                                                <a title="Home demo" href="https://doclik.fr">{{__("Home")}}</a>
                                             </li>
                                             <li>
                                                 <a title="Place detail" href="javascript:void(0)">{{__("How it works")}}</a>
