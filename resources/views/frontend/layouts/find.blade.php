@@ -40,7 +40,21 @@
         var app_url = window.location.origin;
     </script>
     <style>
-
+        #app{
+            margin-top: 80px;
+        }
+        .slides{
+            height: 100%;
+        }
+        .slick-slider{
+            height: 100%;
+        }
+        .slick-list{
+            height: 100%;
+        }
+        .slick-track{
+            height: 100%;
+        }
         @media screen and (max-width: 1024px){
             .site-header{
                 position: fixed;
@@ -57,9 +71,6 @@
                 height: 25px;
                 margin-bottom: 5px;
                 margin-right: 10px;
-            }
-            #app{
-                margin-top: 60px;
             }
         }
     </style>
@@ -125,34 +136,15 @@
                                     <div class="popup__menu popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Home demo" href="{{route('home')}}">Home</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="https://lara-business.getgolo.com">Business Listing</a></li>
-                                                    <li><a href="https://lara-cityguide.getgolo.com">City Guide</a></li>
-                                                </ul>
+                                                <a title="Home demo" href="/">{{__("Home")}}</a>
                                             </li>
                                             <li>
-                                                <a title="Place detail" href="#">Place detail</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="{{route('place_detail', 'boot-cafe')}}">Booking form</a></li>
-                                                    <li><a href="{{route('place_detail', 'le-meurice')}}">Affiliate Book Buttons</a></li>
-                                                    <li><a href="{{route('place_detail', 'musee-guimet')}}">Affiliate Banner Ads</a></li>
-                                                    <li><a href="{{route('place_detail', 'clamato')}}">Enquiry Form</a></li>
-                                                </ul>
+                                                <a title="Place detail" href="javascript:void(0)">{{__("How it works")}}</a>
                                             </li>
                                             <li>
-                                                <a title="Page" href="#">Page</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="https://lara.getgolo.com/post/about-us-10">About</a></li>
-                                                    <li><a href="/page-404">404</a></li>
-                                                    <li><a href="https://lara.getgolo.com/post/faqs-11">Faqs</a></li>
-                                                    <li><a href="{{route('page_landing', '03')}}">App Landing</a></li>
-                                                    <li><a href="{{route('page_landing', '01')}}">Construction</a></li>
-                                                    <li><a href="{{route('page_landing', '02')}}">Coming Soon</a></li>
-                                                </ul>
+                                                <a title="Page" href="javascript:void(0)">{{__("Pricing")}}</a>
                                             </li>
-                                            <li><a title="Blog" href="{{route('post_list_all')}}">Blog</a></li>
-                                            <li><a title="Contacts" href="{{route('page_contact')}}">Contact</a></li>
+                                            <li><a title="Contacts" href="{{route('page_contact')}}">{{__("Contact")}}</a></li>
                                         </ul>
                                     </div><!-- .popup__menu -->
                                 </div><!-- .popup__content -->
@@ -183,7 +175,7 @@
                 </div><!-- .col-md-6 -->
 
                 <div class="col-8 col-md-2 d-flex justify-content-center justify-content-lg-start">
-                    <div class="site__brand">
+                    <div class="logo-container">
                         <a title="Logo" href="{{route('home')}}" class="site__brand__logo"><img src="{{asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')}}" alt="logo"></a>
                     </div><!-- .site__brand -->
                 </div>
@@ -210,13 +202,11 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                {{__('Country')}}
+                                Frnace
                                 <i class="la la-angle-down la-12"></i>
                             </a>
                             <ul>
-                                @foreach($destinations as $city)
-                                    <li><a href="{{route('city_detail', $city->slug)}}" title="{{$city->name}}">{{$city->name}}</a></li>
-                                @endforeach
+                                <li><a href="javascript:void(0)" title="France">France</a></li>
                             </ul>
                         </div><!-- .right-header__destinations -->
                         @guest

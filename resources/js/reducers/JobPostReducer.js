@@ -28,19 +28,22 @@ const  methods = [
         title: 'Online',
         description:'As a video visit',
         inActiveIcon: assets('icons/videocam-green-52.png'),
-        activeIcon: assets('icons/videocam-white-52.png')
+        activeIcon: assets('icons/videocam-white-52.png'),
+        image:assets('video.jpeg'),
     },
     {
         title: 'At Home',
         description:'The doctor will come to my place',
         inActiveIcon: assets('icons/house-call-green-52.png'),
-        activeIcon: assets('icons/house-call-white-52.png')
+        activeIcon: assets('icons/house-call-white-52.png'),
+        image:assets('at-home.jpg'),
     },
     {
         title: 'At the Doctors\' Office',
         description:'I will go see the doctor',
         inActiveIcon: assets('icons/hospital-green-52.png'),
-        activeIcon: assets('icons/hospital-white-52.png')
+        activeIcon: assets('icons/hospital-white-52.png'),
+        image:assets('doctors-office.jpg'),
     }
 ]
 

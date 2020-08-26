@@ -82,7 +82,7 @@ class JobController extends Controller
 
     public function getAppointment(Request $request){
 
-        $token = $request->token;
+        $token = $request->bookid;
         try {
             if($token){
                 $appointment = Appointment::select('appointment.*','appointment_shift.*','appointment.id as id','appointment_shift.id as appointment_shift_id')
@@ -133,6 +133,34 @@ class JobController extends Controller
             return response()->json($request->all());
         }catch (\Exception $e){
             return response()->json(json_encode($e->getMessage()));
+        }
+    }
+
+    public function cancelAppointment(Request $request){
+        $token = $request->bookid;
+        try {
+            if($token){
+                $appointment = Appointment::where('token',$token)->first();
+                AppointmentShift::where('appointment_id', $appointment->id)->first()->delete();
+                $appointment->delete();
+
+                return response()->json([
+                    'status' => 1,
+                    'data'=> ['bookid'=>$token],
+                    'message'=>'successfully canceled appointment'
+                ]);
+            }
+            return response()->json([
+                'status' => 0,
+                'data'=>null,
+                'message'=>'invalid request'
+            ]);
+        }catch (\Exception $e){
+            return response([
+                'status'=>0,
+                'data'=>null,
+                'message'=> $e->getMessage()
+            ]);
         }
     }
 }

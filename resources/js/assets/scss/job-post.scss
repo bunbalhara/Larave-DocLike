@@ -102,9 +102,6 @@
         width: 100%;
         flex-direction: row;
         justify-content: center;
-        @media screen and (max-width:1024px ){
-            margin-top: 60px;
-        }
         .content-container{
             width: 50%;
             display: flex;
@@ -277,8 +274,6 @@
             margin-top: 30px!important;
             @media screen and (max-width: 1024px){
                 margin-top: 20px!important;
-                padding: 20px!important;
-
                 .title{
                     margin-top: 0;
                     font-family: 'Open Sans', sans-serif !important;

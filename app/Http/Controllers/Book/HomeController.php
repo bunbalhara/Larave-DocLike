@@ -12,16 +12,23 @@ class HomeController extends Controller
 {
 
     public function index(Request $request){
-        $token = $request->get('token');
+        $token = $request->get('bookid');
         $twilioToken = $this->getToken();
         if($token){
-            return view('frontend.job.create', compact('token','twilioToken'));
+            $appointment = Appointment::where('token', $token)->first();
+            if($appointment){
+                return view('frontend.job.create', compact('token','twilioToken'));
+            }else{
+                return redirect()->route('home');
+            }
         }else{
             if(auth()->check()){
                 $appointment = Appointment::where('user_id', auth()->user()->id)->first();
                 if($appointment){
                     $token = $appointment->token;
                     return view('frontend.job.create', compact('token','twilioToken'));
+                }else{
+                    return redirect()->route('home');
                 }
             }
             return redirect()->route('home');

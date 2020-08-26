@@ -220,14 +220,11 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                <?php echo e(__('Country')); ?>
-
+                                France
                                 <i class="la la-angle-down la-12"></i>
                             </a>
                             <ul>
-                                <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li><a href="<?php echo e(route('city_detail', $city->slug)); ?>" title="<?php echo e($city->name); ?>"><?php echo e($city->name); ?></a></li>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <li><a href="javascript:void(0)" title="France">France</a></li>
                             </ul>
                         </div><!-- .right-header__destinations -->
                         <?php if(auth()->guard()->guest()): ?>
@@ -400,7 +397,7 @@
                     <div class="col-lg-3">
                         <aside class="footer__top__nav footer__top__nav--contact">
                             <h3><?php echo e(__('Contact Us')); ?></h3>
-                            <p><?php echo e(__('Email: support@domain.com')); ?></p>
+                            <p><?php echo e(__('Email: support@doclike.fr')); ?></p>
                             <p><?php echo e(__('Phone: 1 (00) 832 2342')); ?></p>
                             <ul>
                                 <li>

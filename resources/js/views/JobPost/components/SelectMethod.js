@@ -2,15 +2,52 @@ import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {selectPostMethod} from "../../../actions";
 import LocalizedStrings from 'react-localization';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
 let strings = new LocalizedStrings({
     en:{
         title:'Where do you want to see the doctor? Choose one or more.',
     },
     fr: {
-        title:'Where do you want to see the doctor? Choose one or more',
+        title:'Où voulez-vous voir le médecin? Choisissez un ou plusieurs.',
     }
 });
+
+const settings = {
+    dots: false,
+    infinte:true,
+    speed: 500,
+    slidesToShow: 3,
+    arrows: true,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    initialSlide: 0,
+    className: "slides",
+    rows: 1,
+    centerPadding: "60px",
+    responsive: [
+        {
+            breakpoint: 1500,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+            }
+        },
+    ]
+}
 
 const MethodItem = ({item, active})=>{
 
@@ -23,23 +60,57 @@ const MethodItem = ({item, active})=>{
     return(
         <div
             onClick={selectItem}
-            className='d-flex flex-row justify-content-between align-items-center p-4 mt-1 method-item'
+            className='d-flex flex-row justify-content-between align-items-center method-item'
             style={{
-                backgroundColor:active?'#299acf':'white',
-                width: '100%',
-                maxWidth: 500,
-                borderRadius: 20,
+                backgroundColor:'#8080807f',
+                width: 'calc(100% - 10px)',
+                height:350,
+                maxWidth: 250,
+                borderRadius: 10,
                 borderStyle:'solid',
                 borderWidth: 0.5,
-                borderColor: active?'#299acf':'#8989897f',
+                borderColor: '#8989897f',
                 cursor:'pointer',
+                overflow:'hidden',
+                margin: 'auto',
+                position:'relative'
             }}>
-            <div>
-                <h4 className='title' style={{color: active?'white':'grey', fontSize: 24, marginBottom:0}}>{item.title}</h4>
-                <span className='description' style={{color: active?'white':'grey', fontSize:16}}>{item.description}</span>
+            <img
+                src={item.image}
+                style={{width: '100%', height:'100%', objectFit:'stretch'}}
+            />
+            <div
+                style={{
+                    position:'absolute',
+                    top: 10,
+                    left:10,
+                    width: 50,
+                    height: 50,
+                    backgroundColor:'#169bb9',
+                    borderRadius: 25,
+                    padding: 5,
+                }}
+            >
+                <img src={item.activeIcon} style={{width: '100%', height:'100%', objectFit:'stretch'}} />
             </div>
-            <div>
-                <img src={active?item.activeIcon: item.inActiveIcon} style={{width: 40, height:'auto'}}/>
+
+            <div
+                style={{
+                    position:'absolute',
+                    bottom: 15,
+                    left: 0,
+                    width: '100%',
+                    height: 50,
+                    fontSize: 16,
+                    fontWeight:'bold',
+                    color:'white',
+                    display:'flex',
+                    alignItems:'center',
+                    justifyContent:'center',
+                    backgroundColor:'#0000005f'
+                }}
+            >
+                {item.title}
             </div>
         </div>
     )
@@ -55,13 +126,28 @@ export const SelectMethod = () =>{
     return (
         <div className='container flex flex-column align-items-center content-item select-method'>
             <div>
-                <h4  className='title' style={{fontWeight: 600}}>{strings.title}</h4>
+                <h4
+                    style={{
+                        fontWeight: 600,
+                        paddingTop: 40,
+                        textAlign: 'center'
+                    }}
+                >{strings.title}</h4>
             </div>
-            {
-                methods.map((item, index)=>(
-                    <MethodItem key={index} item={item} active={item === postMethod}/>
-                ))
-            }
+            <div
+                style={{
+                    width:'100%',
+                    height:'100%',
+                }}
+            >
+                <Slider {...settings}>
+                    {
+                        methods.map((item, index)=>(
+                            <MethodItem key={index} item={item} active={item === postMethod}/>
+                        ))
+                    }
+                </Slider>
+            </div>
         </div>
     )
 }

@@ -49,9 +49,11 @@
         "react-places-autocomplete": "^7.3.0",
         "react-redux": "^7.2.1",
         "react-router-dom": "^5.2.0",
+        "react-slick": "^0.27.10",
         "react-swipeable-views": "^0.13.9",
         "redux": "^4.0.5",
         "redux-thunk": "^2.3.0",
+        "slick-carousel": "^1.8.1",
         "twilio-sync": "^0.12.2"
     }
 }

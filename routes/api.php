@@ -18,6 +18,17 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
+
+
+Route::post('get-appointment', 'Appointment\JobController@getAppointment');
+Route::get('get-categories', 'Appointment\JobController@getCategories');
+Route::get('get-current-user', 'Appointment\JobController@getCurrentUser');
+Route::post('save-post', 'Appointment\JobController@savePost');
+Route::post('cancel-appointment', 'Appointment\JobController@cancelAppointment');
+Route::post('get-offers', 'Appointment\JobController@getOffers');
+Route::post('/get-map-routes', 'Appointment\JobController@getMapRoutes');
+
+
 $router->group([
     'as' => 'api_',
     ], function () use ($router) {

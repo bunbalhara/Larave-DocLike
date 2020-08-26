@@ -184,7 +184,7 @@
 
 .place_create #pac-input {
     background-color: #fff;
-    font-family: Roboto;
+    /*font-family: Roboto;*/
     font-size: 15px;
     font-weight: 300;
     padding: 0 11px 0 13px;
@@ -349,3 +349,4 @@
     background-repeat: no-repeat;
     display: block;
 }
+

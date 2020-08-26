@@ -75,6 +75,7 @@ class Kernel extends HttpKernel
         'auth.admin' => \App\Http\Middleware\IsAdmin::class,
         'json.response' => \App\Http\Middleware\ForceJsonResponse::class,
         'cors' => \App\Http\Middleware\Cors::class,
+        'local'=> \App\Http\Middleware\Locale::class,
     ];
 
     /**

@@ -41,7 +41,21 @@
         var app_url = window.location.origin;
     </script>
     <style>
-
+        #app{
+            margin-top: 80px;
+        }
+        .slides{
+            height: 100%;
+        }
+        .slick-slider{
+            height: 100%;
+        }
+        .slick-list{
+            height: 100%;
+        }
+        .slick-track{
+            height: 100%;
+        }
         @media  screen and (max-width: 1024px){
             .site-header{
                 position: fixed;
@@ -58,9 +72,6 @@
                 height: 25px;
                 margin-bottom: 5px;
                 margin-right: 10px;
-            }
-            #app{
-                margin-top: 60px;
             }
         }
     </style>
@@ -117,11 +128,9 @@
                                     <div class="popup__destinations popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Destinations" href="#"><?php echo e(__('Destinations')); ?></a>
+                                                <a title="Destinations" href="#">France</a>
                                                 <ul class="sub-menu">
-                                                    <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                        <li><a href="<?php echo e(route('city_detail', $city->slug)); ?>" title="<?php echo e($city->name); ?>"><?php echo e($city->name); ?></a></li>
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                    <li><a href="javascript:void(0)" title="France">France</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -129,34 +138,15 @@
                                     <div class="popup__menu popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Home demo" href="<?php echo e(route('home')); ?>">Home</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="https://lara-business.getgolo.com">Business Listing</a></li>
-                                                    <li><a href="https://lara-cityguide.getgolo.com">City Guide</a></li>
-                                                </ul>
+                                                <a title="Home demo" href="/"><?php echo e(__("Home")); ?></a>
                                             </li>
                                             <li>
-                                                <a title="Place detail" href="#">Place detail</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="<?php echo e(route('place_detail', 'boot-cafe')); ?>">Booking form</a></li>
-                                                    <li><a href="<?php echo e(route('place_detail', 'le-meurice')); ?>">Affiliate Book Buttons</a></li>
-                                                    <li><a href="<?php echo e(route('place_detail', 'musee-guimet')); ?>">Affiliate Banner Ads</a></li>
-                                                    <li><a href="<?php echo e(route('place_detail', 'clamato')); ?>">Enquiry Form</a></li>
-                                                </ul>
+                                                <a title="Place detail" href="javascript:void(0)"><?php echo e(__("How it works")); ?></a>
                                             </li>
                                             <li>
-                                                <a title="Page" href="#">Page</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="https://lara.getgolo.com/post/about-us-10">About</a></li>
-                                                    <li><a href="/page-404">404</a></li>
-                                                    <li><a href="https://lara.getgolo.com/post/faqs-11">Faqs</a></li>
-                                                    <li><a href="<?php echo e(route('page_landing', '03')); ?>">App Landing</a></li>
-                                                    <li><a href="<?php echo e(route('page_landing', '01')); ?>">Construction</a></li>
-                                                    <li><a href="<?php echo e(route('page_landing', '02')); ?>">Coming Soon</a></li>
-                                                </ul>
+                                                <a title="Page" href="javascript:void(0)"><?php echo e(__("Pricing")); ?></a>
                                             </li>
-                                            <li><a title="Blog" href="<?php echo e(route('post_list_all')); ?>">Blog</a></li>
-                                            <li><a title="Contacts" href="<?php echo e(route('page_contact')); ?>">Contact</a></li>
+                                            <li><a title="Contacts" href="<?php echo e(route('page_contact')); ?>"><?php echo e(__("Contact")); ?></a></li>
                                         </ul>
                                     </div><!-- .popup__menu -->
                                 </div><!-- .popup__content -->
@@ -187,7 +177,7 @@
                 </div><!-- .col-md-6 -->
 
                 <div class="col-8 col-md-2 d-flex justify-content-center justify-content-lg-start">
-                    <div class="site__brand">
+                    <div class="logo-container">
                         <a title="Logo" href="<?php echo e(route('home')); ?>" class="site__brand__logo"><img src="<?php echo e(asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')); ?>" alt="logo"></a>
                     </div><!-- .site__brand -->
                 </div>
@@ -214,14 +204,11 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                <?php echo e(__('Destinations')); ?>
-
+                                Frnace
                                 <i class="la la-angle-down la-12"></i>
                             </a>
                             <ul>
-                                <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li><a href="<?php echo e(route('city_detail', $city->slug)); ?>" title="<?php echo e($city->name); ?>"><?php echo e($city->name); ?></a></li>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <li><a href="javascript:void(0)" title="France">France</a></li>
                             </ul>
                         </div><!-- .right-header__destinations -->
                         <?php if(auth()->guard()->guest()): ?>
@@ -381,7 +368,7 @@
                     <div class="col-lg-3">
                         <aside class="footer__top__nav footer__top__nav--contact">
                             <h3><?php echo e(__('Contact Us')); ?></h3>
-                            <p><?php echo e(__('Email: support@domain.com')); ?></p>
+                            <p><?php echo e(__('Email: support@doclike.fr')); ?></p>
                             <p><?php echo e(__('Phone: 1 (00) 832 2342')); ?></p>
                             <ul>
                                 <li>
@@ -410,7 +397,7 @@
                 </div>
             </div><!-- .top-footer -->
             <div class="footer__bottom">
-                <p class="footer__bottom__copyright"><?php echo e(now()->year); ?> &copy; <a href="<?php echo e(__('https://uxper.co')); ?>" target="_blank"><?php echo e(__('UxPer')); ?></a>. <?php echo e(__('All rights reserved.')); ?></p>
+                <p class="footer__bottom__copyright"><?php echo e(now()->year); ?> &copy; <a href="<?php echo e(__('https://doclike.fr')); ?>" target="_blank"><?php echo e(__("Doclike powered by Hannapp's")); ?></a>. <?php echo e(__('All rights reserved.')); ?></p>
             </div><!-- .top-footer -->
         </div><!-- .container -->
     </footer><!-- site-footer -->

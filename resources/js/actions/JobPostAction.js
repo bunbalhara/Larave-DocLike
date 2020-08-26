@@ -93,7 +93,7 @@ export const postRequest = () => async (dispatch, getState) => {
     if(res.success){
         let token = res.data.appointment.token;
         if(token){
-            window.location.href='http://book.doclike.localhost?token='+token;
+            window.location.href='http://book.doclike.localhost?bookid='+token;
         }
         dispatch({type: JOB_POST_NEXT, payload:{activeStep: 9}})
         dispatch({type: SET_JOB_POST_SHOW_MAP, payload: true})
@@ -215,6 +215,16 @@ export const getOffers = (appointmentId, callback) => async (dispatch) =>{
         dispatch({type: GET_OFFERS_SUCCESS, payload: res.data})
     }else{
         dispatch({type: GET_OFFERS_FAILURE})
+    }
+    if(callback){
+        callback(res)
+    }
+}
+
+export const cancelAppointment = (callback) => async (dispatch) =>{
+    const res = await api.cancelAppointment();
+    if(res.success){
+        window.location.href = 'https://doclike.fr'
     }
     if(callback){
         callback(res)

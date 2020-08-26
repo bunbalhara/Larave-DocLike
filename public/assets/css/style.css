@@ -22,7 +22,7 @@ body {
   font-size: 16px;
   color: #5d5d5d;
   font-weight: 400;
-  font-family: "Jost-Book";
+  /*font-family: "Jost-Book";*/
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -646,7 +646,16 @@ textarea {
   vertical-align: 1px; }
 
 .site-header {
-  padding: 20px 0; }
+    padding: 20px 0;
+    position: fixed!important;
+    height: 80px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 0 4px 2px #8080807f;
+}
   .site-header .container-fluid {
     padding-left: 50px;
     padding-right: 50px; }
@@ -812,7 +821,9 @@ textarea {
   .site__menu > a {
     line-height: 0;
     display: block;
-    margin-right: 23px; }
+    margin-right: 23px;
+      margin-top: 5px;
+  }
     .site__menu > a i {
       font-size: 20px; }
 

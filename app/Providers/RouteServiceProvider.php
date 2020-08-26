@@ -75,7 +75,7 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapFindRoutes()
     {
-        Route::middleware('api')
+        Route::middleware('web')
             ->namespace($this->namespace)
             ->group(base_path('routes/find.php'));
     }

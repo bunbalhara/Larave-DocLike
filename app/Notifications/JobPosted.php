@@ -24,9 +24,9 @@ class JobPosted extends Notification implements ShouldQueue
     public function __construct()
     {
         if(env('PRODUCTION')){
-            $this->link = 'https://doclike.fr/job/post?token=';
+            $this->link = 'https://book.doclike.fr?bookid=';
         }else{
-            $this->link = 'http://localhost:8000/job/post?token=';
+            $this->link = 'http://book.localhost?bookid=';
         }
     }
 

@@ -241,6 +241,7 @@ class HomeController extends Controller
     public function changeLanguage($locale)
     {
         Session::put('language_code', $locale);
+        Session::put('locale', $locale);
         app()->setLocale($locale);
         return back();
     }

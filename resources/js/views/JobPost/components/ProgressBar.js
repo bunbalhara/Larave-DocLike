@@ -5,7 +5,7 @@ import {withStyles} from "@material-ui/core";
 import NavigationIcon from '@material-ui/icons/Navigation';
 import {assets} from "../../../helpers";
 import CloseIcon from '@material-ui/icons/Close';
-import {JOB_POST_REFRESH} from "../../../actions";
+import {cancelAppointment, JOB_POST_REFRESH} from "../../../actions";
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
@@ -68,7 +68,7 @@ export const PostProgressBar = () => {
         }
     },[post])
 
-    const cancelAppointment = () => {
+    const cancel = () => {
         confirmAlert({
             title: 'Confirm!',
             message: 'Do you want really to cancel your post?',
@@ -76,7 +76,7 @@ export const PostProgressBar = () => {
                 {
                     label: 'Yes',
                     onClick: () => {
-
+                        dispatch(cancelAppointment())
                     }
                 },
                 {
@@ -208,7 +208,7 @@ export const PostProgressBar = () => {
                         activeStep > 1 &&
                         <div
                             className='close-appointment'
-                            onClick={cancelAppointment}
+                            onClick={cancel}
                         >
                             <CloseIcon />
                         </div>

@@ -1,8 +1,8 @@
 
 import axios from 'axios';
 const baseURL = window.Laravel.production?
-    'https://find.doclike.fr/api/':
-    'http://find.doclike.localhost/api/'
+    'https://doclike.fr/api/':
+    'http://doclike.localhost/api/'
 
 
 axios.defaults.headers.common = {
@@ -33,11 +33,30 @@ export class Api {
 
     getAppointment(){
         return new Promise(resolve => {
-            Axios.post('/get-appointment',{token: window.Laravel.appointmentToken}).then((res)=>{
+            Axios.post('/get-appointment',{bookid: window.Laravel.appointmentToken}).then((res)=>{
                 if(res.status === 200){
                     let data = res.data;
                     if(data.status === 1){
                         resolve({success: true, data: data.data})
+                    }else {
+                        resolve({success: false, data: null})
+                    }
+                }else{
+                    resolve({success: false, data: null})
+                }
+            }).catch(err=>{
+                console.log(err)
+            })
+        })
+    }
+
+    cancelAppointment(){
+        return new Promise(resolve => {
+            Axios.post('/cancel-appointment',{bookid: window.Laravel.appointmentToken}).then((res)=>{
+                if(res.status === 200){
+                    let data = res.data;
+                    if(data.status === 1){
+                        resolve({success: true, data: null})
                     }else {
                         resolve({success: false, data: null})
                     }

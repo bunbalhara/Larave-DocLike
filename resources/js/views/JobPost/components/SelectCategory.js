@@ -135,7 +135,7 @@ export const SelectCategory = () => {
             className='container flex flex-column align-items-center justify-content-start content-item select-category'
         >
             <div>
-                <h4  style={{fontWeight: 600}} className='title'>Choose a Category.</h4>
+                <h4  style={{fontWeight: 600, textAlign:'center', padding:'20px 0'}}>Choose a Category.</h4>
             </div>
             <div
                 className='mt-2 mb-2 d-flex align-items-center flex-row form-control'

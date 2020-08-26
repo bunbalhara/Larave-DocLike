@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+
+<html lang="<?php echo e(app()->getLocale()); ?>">
 <head>
     <meta charset="utf-8">
     <?php echo SEO::generate(); ?>
@@ -20,13 +21,13 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/libs/gijgo/css/gijgo.min.css')); ?>"/>
 
     <?php if(setting('style_rtl')): ?>
-        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/style-rtl.css')); ?>"/>
-        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/responsive-rtl.css')); ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/style-rtl.css?'.time())); ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/responsive-rtl.css?'.time())); ?>"/>
         <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/custom-rtl.css?v=1.0')); ?>"/>
     <?php else: ?>
-        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/style.css')); ?>"/>
-        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/responsive.css')); ?>"/>
-        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/custom.css?v=1.0')); ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/style.css?'.time())); ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/responsive.css?'.time())); ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/custom.css?'.time())); ?>"/>
     <?php endif; ?>
 
     <link rel="icon" sizes="16x16" href="<?php echo e(asset('assets/images/favicon.png')); ?>">
@@ -99,100 +100,62 @@
                                     <div class="popup__menu popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Home demo" href="<?php echo e(route('home')); ?>">Home</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="https://lara-business.getgolo.com">Business Listing</a></li>
-                                                    <li><a href="https://lara-cityguide.getgolo.com">City Guide</a></li>
-                                                </ul>
+                                                <a title="Home demo" href="/"><?php echo e(__("Home")); ?></a>
                                             </li>
                                             <li>
-                                                <a title="Place detail" href="#">Place detail</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="<?php echo e(route('place_detail', 'boot-cafe')); ?>">Booking form</a></li>
-                                                    <li><a href="<?php echo e(route('place_detail', 'le-meurice')); ?>">Affiliate Book Buttons</a></li>
-                                                    <li><a href="<?php echo e(route('place_detail', 'musee-guimet')); ?>">Affiliate Banner Ads</a></li>
-                                                    <li><a href="<?php echo e(route('place_detail', 'clamato')); ?>">Enquiry Form</a></li>
-                                                </ul>
+                                                <a title="Place detail" href="javascript:void(0)"><?php echo e(__("How it works")); ?></a>
                                             </li>
                                             <li>
-                                                <a title="Page" href="#">Page</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="https://lara.getgolo.com/post/about-us-10">About</a></li>
-                                                    <li><a href="/page-404">404</a></li>
-                                                    <li><a href="https://lara.getgolo.com/post/faqs-11">Faqs</a></li>
-                                                    <li><a href="<?php echo e(route('page_landing', '03')); ?>">App Landing</a></li>
-                                                    <li><a href="<?php echo e(route('page_landing', '01')); ?>">Construction</a></li>
-                                                    <li><a href="<?php echo e(route('page_landing', '02')); ?>">Coming Soon</a></li>
-                                                </ul>
+                                                <a title="Page" href="javascript:void(0)"><?php echo e(__("Pricing")); ?></a>
                                             </li>
-                                            <li><a title="Blog" href="<?php echo e(route('post_list_all')); ?>">Blog</a></li>
-                                            <li><a title="Contacts" href="<?php echo e(route('page_contact')); ?>">Contact</a></li>
+                                            <li><a title="Contacts" href="<?php echo e(route('page_contact')); ?>"><?php echo e(__("Contact")); ?></a></li>
                                         </ul>
                                     </div><!-- .popup__menu -->
                                 </div><!-- .popup__content -->
                                 <div class="popup__button popup__box">
-                                    <a class="btn" href="https://find.doclike.fr/">
-                                        <i class="la la-plus la-24"></i>
-                                        <span><?php echo e(__('Job Post')); ?></span>
+                                    <a class="btn" href="https://find.doclike.fr/" style="display: flex; justify-content: center; align-items: center">
+                                        <i class="la la-plus la-22"></i>
+                                        <span style="padding-top: 2px; padding-left: 5px"><?php echo e(__('Find a doctor')); ?></span>
                                     </a>
                                 </div><!-- .popup__button -->
                             </div><!-- .popup -->
                         </div><!-- .site__menu -->
-                        <div class="site__brand">
+
+                        <div class="logo-container">
                             <a title="Logo" href="<?php echo e(route('home')); ?>" class="site__brand__logo"><img src="<?php echo e(asset(setting('logo') ? 'uploads/' . setting('logo') : 'assets/images/assets/logo.png')); ?>" alt="logo"></a>
                         </div><!-- .site__brand -->
 
                         <?php if (! (isRoute('home'))): ?>
-                            <?php if(setting('template', '01') == '01'): ?>
-                                <div class="site__search golo-ajax-search">
-                                    <a title="Close" href="#" class="search__close">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path fill="#5D5D5D" fill-rule="nonzero" d="M9.3 8.302l6.157-6.156a.706.706 0 1 0-.999-.999L8.302 7.304 2.146 1.148a.706.706 0 1 0-.999.999l6.157 6.156-6.156 6.155a.706.706 0 0 0 .998.999L8.302 9.3l6.156 6.156a.706.706 0 1 0 .998-.999L9.301 8.302z"/>
-                                        </svg>
-                                    </a><!-- .search__close -->
-                                    <form action="<?php echo e(route('search')); ?>" class="site__search__form" method="GET">
-                                        <div class="site__search__field">
-                                    <span class="site__search__icon">
-                                        <i class="la la-search la-24"></i>
-                                    </span><!-- .site__search__icon -->
-                                            <input class="site__search__input" type="text" name="keyword" placeholder="<?php echo e(__('Search places ...')); ?>" autocomplete="off">
-                                            <div class="search-result"></div>
-                                            <div class="golo-loading-effect"><span class="golo-loading"></span></div>
-                                        </div><!-- .search__input -->
-                                    </form><!-- .search__form -->
-                                </div><!-- .site__search -->
-                            <?php else: ?>
-                                <div class="site__search layout-02">
-                                    <a title="Close" href="#" class="search__close">
-                                        <i class="la la-times"></i>
-                                    </a><!-- .search__close -->
-                                    <form action="<?php echo e(route('page_search_listing')); ?>" class="site-banner__search layout-02">
-                                        <div class="field-input">
-                                            <label for="input_search"><?php echo e(__('Find')); ?></label>
-                                            <input class="site-banner__search__input open-suggestion" id="input_search" type="text" name="keyword" placeholder="Ex: Dentiste, kyné" autocomplete="off">
-                                            <input type="hidden" name="category[]" id="category_id">
-                                            <div class="search-suggestions category-suggestion">
-                                                <ul>
-                                                    <li><a href="#"><span><?php echo e(__('Loading...')); ?></span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- .site-banner__search__input -->
-                                        <div class="field-input">
-                                            <label for="location_search"><?php echo e(__('Where')); ?></label>
-                                            <input class="site-banner__search__input open-suggestion" id="location_search" type="text" name="city_name" placeholder="Your city" autocomplete="off">
-                                            <input type="hidden" id="city_id">
-                                            <div class="search-suggestions location-suggestion">
-                                                <ul>
-                                                    <li><a href="#"><span><?php echo e(__('Loading...')); ?></span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- .site-banner__search__input -->
-                                        <div class="field-submit">
-                                            <button><i class="las la-search la-24-black"></i></button>
+                            <div class="site__search layout-02">
+                                <a title="Close" href="#" class="search__close">
+                                    <i class="la la-times"></i>
+                                </a><!-- .search__close -->
+                                <form action="<?php echo e(route('page_search_listing')); ?>" class="site-banner__search layout-02">
+                                    <div class="field-input">
+                                        <label for="input_search"><?php echo e(__('Find')); ?></label>
+                                        <input class="site-banner__search__input open-suggestion" id="input_search" type="text" name="keyword" placeholder="Ex: Dentiste, kyné" autocomplete="off">
+                                        <input type="hidden" name="category[]" id="category_id">
+                                        <div class="search-suggestions category-suggestion">
+                                            <ul>
+                                                <li><a href="#"><span><?php echo e(__('Loading...')); ?></span></a></li>
+                                            </ul>
                                         </div>
-                                    </form><!-- .site-banner__search -->
-                                </div>
-                            <?php endif; ?>
+                                    </div><!-- .site-banner__search__input -->
+                                    <div class="field-input">
+                                        <label for="location_search"><?php echo e(__('Where')); ?></label>
+                                        <input class="site-banner__search__input open-suggestion" id="location_search" type="text" name="city_name" placeholder="Your city" autocomplete="off">
+                                        <input type="hidden" id="city_id">
+                                        <div class="search-suggestions location-suggestion">
+                                            <ul>
+                                                <li><a href="#"><span><?php echo e(__('Loading...')); ?></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- .site-banner__search__input -->
+                                    <div class="field-submit">
+                                        <button><i class="las la-search la-24-black"></i></button>
+                                    </div>
+                                </form><!-- .site-banner__search -->
+                            </div>
                         <?php endif; ?>
 
                     </div><!-- .site -->
@@ -203,7 +166,7 @@
                     <div class="right-header align-right">
                         <div class="right-header__languages">
                             <a href="#">
-                                <img src="<?php echo e(flagImageUrl(\Illuminate\Support\Facades\App::getLocale())); ?>">
+                                <img src="<?php echo e(flagImageUrl(app()->getLocale())); ?>">
                                 <?php if(count($languages) > 1): ?>
                                     <i class="las la-angle-down la-12-black"></i>
                                 <?php endif; ?>
@@ -211,7 +174,7 @@
                             <?php if(count($languages) > 1): ?>
                                 <ul>
                                     <?php $__currentLoopData = $languages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <?php if(\Illuminate\Support\Facades\App::getLocale() !== $language->code): ?>
+                                        <?php if(app()->getLocale() !== $language->code): ?>
                                             <li><a href="<?php echo e(route('change_language', $language->code)); ?>" title="<?php echo e($language->name); ?>"><img src="<?php echo e(flagImageUrl($language->code)); ?>"><?php echo e($language->name); ?></a></li>
                                         <?php endif; ?>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -221,14 +184,11 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                <?php echo e(__('Country')); ?>
-
+                                Frnace
                                 <i class="la la-angle-down la-12"></i>
                             </a>
                             <ul>
-                                <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li><a href="<?php echo e(route('city_detail', $city->slug)); ?>" title="<?php echo e($city->name); ?>"><?php echo e($city->name); ?></a></li>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <li><a href="javascript:void(0)" title="France">France</a></li>
                             </ul>
                         </div><!-- .right-header__destinations -->
                         <?php if(auth()->guard()->guest()): ?>
@@ -341,22 +301,15 @@
                                 </div>
                             </div><!-- .account -->
                         <?php endif; ?>
-                        <div class="right-header__search">
-                            <a title="Search" href="#" class="search-open">
-                                <i class="la la-search la-24"></i>
-                            </a>
-                        </div>
                         <div class="right-header__button btn">
-                            <a title="Add place" href="https://find.doclike.fr/">
-                                <i class="la la-plus la-24"></i>
-                                <span><?php echo e(__('Job Post')); ?></span>
+                            <a title="Add place" href="https://find.doclike.fr/" class="flex-center">
+                                <i class="la la-plus" style="font-size: 20px"></i>
+                                <span><?php echo e(__('Find a doctor')); ?></span>
                             </a>
                         </div><!-- .right-header__button -->
                     </div><!-- .right-header -->
                 </div><!-- .col-md-6 -->
             </div><!-- .row -->
-
-
         </div><!-- .container-fluid -->
     </header><!-- .site-header -->
 
@@ -401,7 +354,7 @@
                     <div class="col-lg-3">
                         <aside class="footer__top__nav footer__top__nav--contact">
                             <h3><?php echo e(__('Contact Us')); ?></h3>
-                            <p><?php echo e(__('Email: support@domain.com')); ?></p>
+                            <p><?php echo e(__('Email: support@doclike.fr')); ?></p>
                             <p><?php echo e(__('Phone: 1 (00) 832 2342')); ?></p>
                             <ul>
                                 <li>

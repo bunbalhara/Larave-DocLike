@@ -896,3 +896,19 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
+/*2020-08-26 put logo center for desktop*/
+.logo-container{
+    background-color: #55555500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    z-index: 10;
+    pointer-events: none;
+}

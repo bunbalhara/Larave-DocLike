@@ -218,13 +218,11 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                {{__('Country')}}
+                                France
                                 <i class="la la-angle-down la-12"></i>
                             </a>
                             <ul>
-                                @foreach($destinations as $city)
-                                    <li><a href="{{route('city_detail', $city->slug)}}" title="{{$city->name}}">{{$city->name}}</a></li>
-                                @endforeach
+                                <li><a href="javascript:void(0)" title="France">France</a></li>
                             </ul>
                         </div><!-- .right-header__destinations -->
                         @guest
