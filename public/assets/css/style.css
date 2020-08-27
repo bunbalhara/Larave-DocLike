@@ -22,7 +22,7 @@ body {
   font-size: 16px;
   color: #5d5d5d;
   font-weight: 400;
-  /*font-family: "Jost-Book";*/
+  /**/
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -82,66 +82,59 @@ h1 {
 
 h2 {
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
   vertical-align: baseline;
   clear: both;
   color: #2d2d2d;
-  font-family: "Jost";
+    font-size: 24px;
   font-weight: 700;
-  font-size: 20px; }
+}
 
 h3 {
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
   vertical-align: baseline;
   clear: both;
   color: #2d2d2d;
-  font-family: "Jost";
   font-weight: 700;
   font-size: 18px; }
 
 h4 {
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
   vertical-align: baseline;
   clear: both;
   color: #2d2d2d;
-  font-family: "Jost";
   font-weight: 700;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 h5 {
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
   vertical-align: baseline;
   clear: both;
   color: #2d2d2d;
-  font-family: "Jost";
   font-weight: 700;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 h6 {
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
   vertical-align: baseline;
   clear: both;
   color: #2d2d2d;
-  font-family: "Jost";
   font-weight: 700;
   font-size: 12px; }
 
@@ -638,7 +631,6 @@ textarea {
   opacity: 1; }
 
 .title--result span {
-  font-family: "Jost-Book";
   font-size: 16px;
   font-weight: 400;
   color: #5d5d5d;
@@ -707,7 +699,6 @@ textarea {
   .popup .popup__user {
     padding: 30px 25px; }
     .popup .popup__user a {
-      font-family: "Jost";
       font-size: 15px;
       font-weight: 500;
       margin-right: 25px; }
@@ -730,7 +721,6 @@ textarea {
     .popup__box li:last-child {
       margin-bottom: 0; }
     .popup__box li a {
-      font-family: "Jost";
       font-size: 15px;
       font-weight: 500;
       margin-right: 25px;
@@ -787,7 +777,6 @@ textarea {
   margin-bottom: 10px; }
 
 .product-small__price span {
-  font-family: "Jost";
   font-size: 15px;
   font-weight: 500;
   color: #2d2d2d; }
@@ -801,7 +790,7 @@ textarea {
   .product-small__total b {
     font-size: 18px;
     font-weight: 500;
-    font-family: "Jost"; }
+     }
   .product-small__total span {
     font-size: 18px; }
 
@@ -886,19 +875,19 @@ textarea {
     color: #8d8d8d;
     margin-left: 26px;
     width: calc(100% - 26px);
-    font-family: "Jost-Book"; }
+     }
     .site__search__form .site__search__input::placeholder {
       color: #8d8d8d;
       font-weight: 400;
-      font-family: "Jost-Book"; }
+       }
     .site__search__form .site__search__input:-ms-input-placeholder {
       color: #8d8d8d;
       font-weight: 400;
-      font-family: "Jost-Book"; }
+       }
     .site__search__form .site__search__input::-ms-input-placeholder {
       color: #8d8d8d;
       font-weight: 400;
-      font-family: "Jost-Book"; }
+       }
 
 .site__search__icon {
   line-height: 0;
@@ -979,7 +968,7 @@ textarea {
   .right-header__button a {
     color: #ffffff;
     font-weight: 500;
-    font-family: "Jost-Book";
+
     display: block; }
 
 .site-banner {
@@ -1000,7 +989,7 @@ textarea {
 
 .site-banner__title {
   font-size: 52px;
-  font-family: "Jost";
+
   font-weight: 500;
   color: #2d2d2d;
   margin-bottom: 32px; }
@@ -1037,28 +1026,28 @@ textarea {
 .site-banner__search__input::placeholder {
   color: #8d8d8d;
   font-weight: 400;
-  font-family: "Jost-Book";
+
   font-size: 16px; }
 .site-banner__search__input:-ms-input-placeholder {
   color: #8d8d8d;
   font-weight: 400;
-  font-family: "Jost-Book";
+
   font-size: 16px; }
 .site-banner__search__input::-ms-input-placeholder {
   color: #8d8d8d;
   font-weight: 400;
-  font-family: "Jost-Book";
+
   font-size: 16px; }
 
 .site-banner__meta span {
   padding-left: 20px;
   opacity: 0.8;
-  font-family: "Jost-Book";
+
   color: #2d2d2d;
   margin-right: 1px; }
 .site-banner__meta a {
   opacity: 1;
-  font-family: "Jost";
+
   font-weight: 500;
   color: #2d2d2d;
   position: relative;
@@ -1139,7 +1128,7 @@ textarea {
   color: #ffffff; }
 .cities__info .cities__number {
   color: #ffffff;
-  font-family: "Jost-Book";
+
   opacity: 0.9; }
 
 .banner-apps {
@@ -1160,7 +1149,7 @@ textarea {
     font-size: 24px;
     color: #1a1a1a;
     line-height: 33px;
-    font-family: "Jost-Book";
+
     margin-bottom: 40px; }
   .banner-apps__content .banner-apps__download > a {
     max-width: 200px;
@@ -1196,7 +1185,7 @@ textarea {
     .post__category li a {
       text-transform: uppercase;
       opacity: 0.9;
-      font-family: "Jost-Book";
+
       color: #5d5d5d;
       margin-right: 8px;
       position: relative;
@@ -1331,7 +1320,7 @@ textarea {
     margin-right: 28px;
     line-height: 40px; }
     .city-content__tabtitle__tablist li a {
-      font-family: "Jost-Semi";
+
       font-size: 16px;
       text-transform: uppercase;
       display: block;
@@ -1542,7 +1531,7 @@ textarea {
 
 .place__left h1 {
   font-size: 36px;
-  font-family: "Jost-Book";
+
   margin-bottom: 6px;
   font-weight: 400; }
 
@@ -1675,7 +1664,7 @@ textarea {
   .place__title--reviews .place__reviews__number span {
     color: #8d8d8d;
     line-height: 1.53;
-    font-family: "Jost-Book"; }
+     }
 .place__title--reviews svg {
   margin-right: 10px; }
   .place__title--reviews svg > * {
@@ -1744,7 +1733,7 @@ textarea {
   margin-right: 10px; }
 .place__author__info span.time,
 .landing-customers-item span.time {
-  font-family: "Jost-Book";
+
   font-size: 13px;
   color: #9d9d9d;
   font-style: italic;
@@ -1781,7 +1770,7 @@ a.place__comments__reply {
     font-size: 20px; }
 
 .place__box--reviews .place__login a {
-  font-family: "Jost";
+
   font-weight: 500;
   color: #169bb9; }
 
@@ -1840,7 +1829,7 @@ a.place__comments__reply {
     .places-item .places-item__info a {
       color: #ffffff; }
   .places-item h3 {
-    font-family: "Jost-Book";
+
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 3px; }
@@ -1860,7 +1849,7 @@ a.place__comments__reply {
     color: #169bb9; }
 
 .places-item__category a {
-  font-family: "Jost-Book";
+
   font-size: 12px;
   text-transform: uppercase; }
   .places-item__category a:after {
@@ -1948,7 +1937,7 @@ a.place__comments__reply {
       margin-right: 0; }
     .site__order > div > a {
       font-weight: 500;
-      font-family: "Jost"; }
+       }
       .site__order > div > a i {
         font-size: 12px; }
   .site__order ul.open {
@@ -2099,7 +2088,7 @@ a.place__comments__reply {
   margin-bottom: 10px; }
 
 .shop__products__price {
-  font-family: "Jost-Book";
+
   font-size: 18px; }
 
 .pagination {
@@ -2138,7 +2127,7 @@ a.place__comments__reply {
   margin-bottom: 40px; }
 
 .shop-details__summary h2 {
-  font-family: "Jost-Book";
+
   font-size: 36px;
   font-weight: 400;
   margin-bottom: 10px; }
@@ -2149,7 +2138,7 @@ a.place__comments__reply {
 .shop-details__price {
   font-size: 18px;
   font-weight: 500;
-  font-family: "Jost";
+
   color: #2d2d2d;
   margin-bottom: 20px; }
 
@@ -2174,7 +2163,7 @@ a.place__comments__reply {
     text-align: center;
     font-style: normal;
     font-size: 16px;
-    font-family: "Jost";
+
     line-height: normal;
     position: absolute;
     width: 100%;
@@ -2221,7 +2210,7 @@ a.place__comments__reply {
     line-height: 50px;
     height: 50px;
     padding: 0 113px;
-    font-family: "Jost";
+
     font-size: 15px;
     font-weight: 500;
     color: #ffffff;
@@ -2233,12 +2222,12 @@ a.place__comments__reply {
   margin-bottom: 40px; }
   .shop-details__details b {
     font-weight: 500;
-    font-family: "Jost"; }
+     }
   .shop-details__details span {
-    font-family: "Jost-Book";
+
     color: #5d5d5d; }
   .shop-details__details a {
-    font-family: "Jost-Book";
+
     color: #5d5d5d; }
   .shop-details__details > div {
     line-height: 20px;
@@ -2268,7 +2257,7 @@ a.place__comments__reply {
     display: inline-block;
     margin-right: 40px; }
     .shop-details__tablist li a {
-      font-family: "Jost";
+
       color: #2d2d2d;
       font-size: 18px;
       font-weight: 500; }
@@ -2446,24 +2435,24 @@ a.place__comments__reply {
     line-height: 40px;
     height: 40px;
     margin-bottom: 20px;
-    font-family: "Jost-Book"; }
+     }
     .newsletterForm input::placeholder {
       font-size: 14px;
       font-style: italic;
       color: #8d8d8d;
-      font-family: "Jost-Book";
+
       opacity: 0.62; }
     .newsletterForm input:-ms-input-placeholder {
       font-size: 14px;
       font-style: italic;
       color: #8d8d8d;
-      font-family: "Jost-Book";
+
       opacity: 0.62; }
     .newsletterForm input::-ms-input-placeholder {
       font-size: 14px;
       font-style: italic;
       color: #8d8d8d;
-      font-family: "Jost-Book";
+
       opacity: 0.62; }
   .newsletterForm button {
     width: 100%;
@@ -2519,7 +2508,7 @@ a.place__comments__reply {
     .entry-meta li a {
       font-weight: 500;
       color: #8d8d8d;
-      font-family: "Jost"; }
+       }
       .entry-meta li a:hover {
         color: #169bb9; }
 
@@ -2579,7 +2568,7 @@ a.place__comments__reply {
     line-height: 1.44; }
 
 .author-title > a {
-  font-family: "Jost";
+
   font-size: 14px;
   font-weight: 500; }
   .author-title > a:hover {
@@ -2660,7 +2649,7 @@ a.place__comments__reply {
       .popup-form .choose-form li a {
         font-size: 20px;
         font-weight: 500;
-        font-family: "Jost";
+
         line-height: normal;
         text-align: center;
         border-bottom: 2px solid transparent;
@@ -2912,7 +2901,7 @@ a.place__comments__reply {
       height: 26px;
       border-right: 4px solid transparent;
       transition: all 0.3s;
-      font-family: "Jost"; }
+       }
     .listing-menu li.active a {
       color: #2d2d2d;
       font-weight: 500;
@@ -2949,7 +2938,7 @@ a.place__comments__reply {
     color: #2d2d2d;
     margin-bottom: 6px;
     font-weight: 500;
-    font-family: "Jost"; }
+     }
   .listing-box input,
   .listing-box select,
   .listing-box .chosen-choices {
@@ -2970,19 +2959,19 @@ a.place__comments__reply {
     outline: 0;
     box-shadow: initial; }
   .listing-box input::placeholder {
-    font-family: "Jost-Book";
+
     font-size: 15px;
     color: #8d8d8d; }
   .listing-box input:-ms-input-placeholder {
-    font-family: "Jost-Book";
+
     font-size: 15px;
     color: #8d8d8d; }
   .listing-box input::-ms-input-placeholder {
-    font-family: "Jost-Book";
+
     font-size: 15px;
     color: #8d8d8d; }
   .listing-box select {
-    font-family: "Jost-Book";
+
     font-size: 15px;
     color: #8d8d8d; }
   .listing-box .field-inline {
@@ -3110,11 +3099,11 @@ a.place__comments__reply {
   height: 120px; }
 
 .chosen-container-multi .chosen-choices li.search-field input[type=text] {
-  font-family: "Jost-Book";
+
   font-size: 15px !important;
   color: #8d8d8d !important; }
 .chosen-container-multi .chosen-choices li.search-choice {
-  font-family: "Jost";
+
   font-size: 15px;
   border: 0;
   padding: 0 15px 0 0;
@@ -3132,7 +3121,7 @@ a.place__comments__reply {
 .field-maps .field-inline .field-button {
   padding: 0 15px; }
 .field-maps .field-button a {
-  font-family: "Jost";
+
   font-size: 15px;
   font-weight: 500;
   color: #2d2d2d; }
@@ -3178,7 +3167,7 @@ a.place__comments__reply {
   border: solid 2px #2d2d2d;
   color: #2d2d2d;
   background-color: #ffffff;
-  font-family: "Jost";
+
   font-size: 15px;
   font-weight: 500;
   transition: inherit; }
@@ -3197,7 +3186,7 @@ a.place__comments__reply {
     margin-bottom: 0; }
   .accordion-top > span {
     padding: 0 15px;
-    font-family: "Jost-Book";
+
     font-size: 15px;
     font-style: italic;
     position: relative; }
@@ -3263,7 +3252,7 @@ a.place__comments__reply {
     transform: translate(-50%, -50%);
     font-size: 26px; }
 .field-file .field-note {
-  font-family: "Jost-Book";
+
   font-size: 12px;
   font-style: italic;
   color: #8d8d8d;
@@ -3309,7 +3298,7 @@ a.place__comments__reply {
       flex-grow: 1;
       position: relative; }
     .maps-wrap .places-item h3 {
-      font-family: "Jost-Book";
+
       font-size: 20px;
       color: #2d2d2d; }
   .maps-wrap .gm-style .gm-style-iw-c {
@@ -3322,13 +3311,13 @@ a.place__comments__reply {
     content: '';
     display: none !important; }
   .maps-wrap .places-item__category {
-    font-family: "Jost-Book";
+
     font-size: 12px;
     color: #8d8d8d;
     text-transform: uppercase;
     margin-bottom: 4px; }
   .maps-wrap .places-item__number {
-    font-family: "Jost";
+
     font-size: 15px;
     font-weight: 500; }
     .maps-wrap .places-item__number svg {
@@ -3340,12 +3329,12 @@ a.place__comments__reply {
     bottom: 15px; }
     .maps-wrap .places-item__meta .places-item__count {
       color: #5d5d5d;
-      font-family: "Jost-Book";
+
       font-size: 15px;
       margin-left: 5px; }
     .maps-wrap .places-item__meta .places-item__currency {
       color: #2d2d2d;
-      font-family: "Jost-Book";
+
       font-size: 16px; }
   .maps-wrap .gm-ui-hover-effect {
     top: 5px !important;
@@ -3393,17 +3382,17 @@ a.place__comments__reply {
     position: relative;
     min-width: 205px; }
   #place-map-filter .places-item h3 {
-    font-family: "Jost-Book";
+
     font-size: 20px;
     color: #2d2d2d; }
 #place-map-filter .places-item__category {
-  font-family: "Jost-Book";
+
   font-size: 12px;
   color: #8d8d8d;
   text-transform: uppercase;
   margin-bottom: 4px; }
 #place-map-filter .places-item__number {
-  font-family: "Jost";
+
   font-size: 15px;
   font-weight: 500; }
   #place-map-filter .places-item__number svg {
@@ -3415,12 +3404,12 @@ a.place__comments__reply {
   bottom: 15px; }
   #place-map-filter .places-item__meta .places-item__count {
     color: #5d5d5d;
-    font-family: "Jost-Book";
+
     font-size: 15px;
     margin-left: 5px; }
   #place-map-filter .places-item__meta .places-item__currency {
     color: #2d2d2d;
-    font-family: "Jost-Book";
+
     font-size: 16px; }
 #place-map-filter .gm-ui-hover-effect {
   top: 5px !important;
@@ -3455,7 +3444,7 @@ a.place__comments__reply {
     height: 40px;
     line-height: 40px;
     background-color: #ffffff;
-    font-family: "Jost";
+
     font-size: 15px;
     font-weight: 500;
     border-radius: 20px;
@@ -3513,7 +3502,7 @@ a.place__comments__reply {
     transition: all 0s;
     background-color: #000000;
     font-size: 15px;
-    font-family: "Jost-Book";
+
     font-weight: normal;
     transition: all 0.3s; }
     .place-04 .place-gallery a:hover {
@@ -3532,7 +3521,7 @@ a.place__comments__reply {
 .place-04 .breadcrumbs a {
   color: #ffffff;
   font-size: 14px;
-  font-family: "Jost-Book";
+
   font-weight: normal; }
 .place-04 .place__box--npd {
   border-bottom: 0; }
@@ -3552,7 +3541,7 @@ a.place__comments__reply {
   align-items: center; }
   .place-04 .hightlight-grid .hightlight-count {
     margin-right: 70px;
-    font-family: "Jost-Book";
+
     font-size: 16px;
     color: #169bb9;
     white-space: nowrap; }
@@ -3613,7 +3602,7 @@ a.place__comments__reply {
 .place-04 .open-table {
   width: 100%; }
   .place-04 .open-table .day {
-    font-family: "Jost";
+
     font-size: 16px;
     font-weight: 500;
     line-height: 1.88;
@@ -3725,17 +3714,17 @@ a.place__comments__reply {
     .review-form .field-textarea textarea:focus {
       height: 92px; }
 .review-form textarea::-webkit-input-placeholder {
-  font-family: "Jost-Book";
+
   font-size: 15px;
   line-height: 1.53;
   color: #8d8d8d; }
 .review-form textarea:-ms-input-placeholder {
-  font-family: "Jost-Book";
+
   font-size: 15px;
   line-height: 1.53;
   color: #8d8d8d; }
 .review-form textarea::placeholder {
-  font-family: "Jost-Book";
+
   font-size: 15px;
   line-height: 1.53;
   color: #8d8d8d; }
@@ -3828,13 +3817,13 @@ a.place__comments__reply {
   .company-info .ci-content {
     padding: 0 60px; }
     .company-info .ci-content span {
-      font-family: "Jost-Book";
+
       font-size: 16px;
       line-height: 23px;
       color: #5d5d5d;
       margin-bottom: 10px; }
     .company-info .ci-content h2 {
-      font-family: "Jost";
+
       font-size: 28px;
       color: #2d2d2d;
       font-weight: 500;
@@ -3862,7 +3851,7 @@ a.place__comments__reply {
       color: #ffffff;
       margin-bottom: 5px; }
     .ot-item .ot-info span.job {
-      font-family: "Jost-Book";
+
       font-style: italic;
       font-size: 16px;
       color: #ffffff; }
@@ -3954,17 +3943,17 @@ a.place__comments__reply {
   font-size: 15px;
   font-style: normal;
   color: #8d8d8d;
-  font-family: "Jost-Book"; }
+   }
 .form-underline textarea:-ms-input-placeholder {
   font-size: 15px;
   font-style: normal;
   color: #8d8d8d;
-  font-family: "Jost-Book"; }
+   }
 .form-underline textarea::placeholder {
   font-size: 15px;
   font-style: normal;
   color: #8d8d8d;
-  font-family: "Jost-Book"; }
+   }
 .form-underline input {
   width: 100%;
   height: 40px;
@@ -3980,17 +3969,17 @@ a.place__comments__reply {
     font-size: 15px;
     font-style: normal;
     color: #8d8d8d;
-    font-family: "Jost-Book"; }
+     }
   .form-underline input:-ms-input-placeholder {
     font-size: 15px;
     font-style: normal;
     color: #8d8d8d;
-    font-family: "Jost-Book"; }
+     }
   .form-underline input::-ms-input-placeholder {
     font-size: 15px;
     font-style: normal;
     color: #8d8d8d;
-    font-family: "Jost-Book"; }
+     }
 .form-underline input[type="submit"] {
   border-radius: 20px;
   background-color: #169bb9;
@@ -4117,7 +4106,7 @@ a.place__comments__reply {
 .site-contact .contact-box {
   margin-bottom: 30px; }
   .site-contact .contact-box a {
-    font-family: "Jost";
+
     font-size: 15px;
     font-weight: 500;
     color: #169bb9; }
@@ -4151,7 +4140,7 @@ a.place__comments__reply {
     font-weight: 500;
     margin-bottom: 15px; }
   .error-wrap b {
-    font-family: "Jost";
+
     font-size: 24px;
     font-weight: 500;
     display: block;
@@ -4185,7 +4174,7 @@ a.place__comments__reply {
       top: 50%;
       right: 0;
       margin-top: -4px;
-      font-family: 'Font Awesome 5 Pro'; }
+      ; }
   .accordion li.open a:after {
     content: "\f068"; }
   .accordion h3 {
@@ -4204,7 +4193,7 @@ a.place__comments__reply {
     vertical-align: middle;
     display: inline-block; }
   .account span {
-    font-family: "Jost";
+
     vertical-align: middle;
     display: inline-block;
     font-size: 15px;
@@ -4236,7 +4225,7 @@ a.place__comments__reply {
     .account-sub li a {
       display: block;
       padding: 10px 20px;
-      font-family: "Jost";
+
       font-size: 15px;
       font-weight: 500; }
     .account-sub li:last-child {
@@ -4261,7 +4250,7 @@ a.place__comments__reply {
       height: 60px;
       line-height: 60px;
       display: block;
-      font-family: "Jost"; }
+       }
     .member-menu li:first-child {
       padding-left: 0; }
     .member-menu li.active a {
@@ -4311,7 +4300,7 @@ a.place__comments__reply {
       outline: 0;
       outline-offset: 0; }
   .member-wrap label {
-    font-family: "Jost";
+
     font-size: 15px;
     font-weight: 500;
     color: #2d2d2d; }
@@ -4335,7 +4324,7 @@ a.place__comments__reply {
   .member-wrap-top p {
     font-size: 16px;
     font-weight: 500;
-    font-family: "Jost"; }
+     }
     .member-wrap-top p a {
       color: #169bb9; }
       .member-wrap-top p a:hover {
@@ -4356,7 +4345,7 @@ a.place__comments__reply {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
-    font-family: "Jost";
+
     color: #2d2d2d; }
   .upgrade-box img {
     position: absolute;
@@ -4401,7 +4390,7 @@ a.place__comments__reply {
       font-size: 36px;
       font-weight: 500;
       line-height: 1.61;
-      font-family: "Jost";
+
       color: #2d2d2d; }
     .member-statistical .item .line {
       border-radius: 5px;
@@ -4444,7 +4433,7 @@ a.place__comments__reply {
       font-size: 15px;
       font-weight: 500;
       color: #169bb9;
-      font-family: "Jost"; }
+       }
     .ob-item .ob-head a.clear-all {
       color: #e74807; }
   .ob-item .ob-content li {
@@ -4461,7 +4450,7 @@ a.place__comments__reply {
       display: inline-block;
       color: #5d5d5d;
       font-weight: 500;
-      font-family: "Jost"; }
+       }
   .ob-item .ob-content li.pending span {
     color: #ffcc00; }
   .ob-item .ob-content li.approve span {
@@ -4471,13 +4460,13 @@ a.place__comments__reply {
   .ob-item .ob-content p.place {
     color: #2d2d2d;
     font-weight: 500;
-    font-family: "Jost"; }
+     }
   .ob-item .ob-content p.status {
     margin-bottom: 0; }
     .ob-item .ob-content p.status span {
       font-size: 16px;
       font-weight: 500;
-      font-family: "Jost"; }
+       }
   .ob-item .ob-content a.more {
     position: absolute;
     top: 40px;
@@ -4501,7 +4490,7 @@ a.place__comments__reply {
   .noti-item p {
     font-size: 16px;
     line-height: 1.5;
-    font-family: "Jost";
+
     margin-bottom: 10px; }
   .noti-item span,
   .noti-item a {
@@ -4586,7 +4575,7 @@ a.place__comments__reply {
     padding: 30px 20px 20px;
     font-size: 15px;
     font-weight: 500;
-    font-family: Jost;
+
     color: #5d5d5d;
     text-transform: uppercase;
     line-height: 1.6; }
@@ -4597,7 +4586,7 @@ a.place__comments__reply {
     padding: 20px 20px;
     font-size: 16px;
     font-weight: 500;
-    font-family: "Jost"; }
+     }
     .member-place-list td img {
       width: 70px;
       height: 70px;
@@ -4613,7 +4602,7 @@ a.place__comments__reply {
     .member-place-list td b {
       font-size: 16px;
       font-weight: 500;
-      font-family: Jost;
+
       color: #2d2d2d; }
     .member-place-list td i {
       font-size: 24px;
@@ -4698,7 +4687,7 @@ a.place__comments__reply {
       font-size: 20px; }
 
 .member-wishlist-wrap h1 {
-  font-family: Jost;
+
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 30px; }
@@ -4733,7 +4722,7 @@ a.place__comments__reply {
     text-align: center;
     margin-bottom: 20px; }
   .alert p {
-    font-family: Jost;
+
     font-weight: 500;
     padding: 22px 22px 22px 66px;
     border: solid 1px #20d706;
@@ -4854,14 +4843,14 @@ a.place__comments__reply {
   .home-main .site-banner__content h1 {
     font-size: 72px;
     margin-bottom: 10px;
-    font-family: Jost;
+
     font-weight: 500;
     color: #ffffff; }
   .home-main .site-banner__content p {
     font-size: 24px;
     color: #ffffff;
     margin-bottom: 30px;
-    font-family: Jost;
+
     font-weight: 300; }
   .home-main .site-banner__content .site-banner__search {
     margin: 0 auto; }
@@ -4897,13 +4886,13 @@ a.place__comments__reply {
     text-align: center;
     z-index: 2; }
   .explore-item h3 a {
-    font-family: Jost;
+
     font-size: 24px;
     font-weight: 500;
     color: #ffffff;
     line-height: 1.58; }
   .explore-item span {
-    font-family: Jost;
+
     font-size: 16px;
     color: #ffffff;
     line-height: 1.5;
@@ -4969,7 +4958,7 @@ a.place__comments__reply {
       background-color: #169bb9; }
 
 .title-border-bottom {
-  font-family: Jost;
+
   font-size: 28px;
   font-weight: 500;
   line-height: 1.61;
@@ -5057,7 +5046,7 @@ a.place__comments__reply {
   border-radius: 5px;
   height: 32px;
   line-height: 32px;
-  font-family: Jost;
+
   font-size: 15px;
   font-weight: 500;
   padding: 0 15px;
@@ -5103,7 +5092,7 @@ a.place__comments__reply {
   margin-bottom: 25px; }
 .place-item.layout-02 .entry-bottom {
   font-weight: 500;
-  font-family: Jost;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5187,7 +5176,7 @@ a.place__comments__reply {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
   .testimonial-item p {
-    font-family: Jost;
+
     font-size: 18px;
     line-height: 1.44;
     margin-bottom: 20px; }
@@ -5195,7 +5184,7 @@ a.place__comments__reply {
     font-weight: 500;
     margin-bottom: 5px; }
   .testimonial-item span {
-    font-family: Jost;
+
     font-size: 16px;
     font-style: italic;
     color: #9a9a9a; }
@@ -5330,7 +5319,7 @@ a.place__comments__reply {
     position: relative;
     z-index: 2; }
   .page-title.layout-2 h1 {
-    font-family: Jost;
+
     font-size: 80px;
     font-weight: 500; }
 
@@ -5395,8 +5384,6 @@ a.place__comments__reply {
 .archive-city.layout-02 .result-count {
   font-size: 18px !important;
   color: #5d5d5d !important; }
-.archive-city.layout-02 .filter-control span {
-  font-family: "Jost" !important; }
 .archive-city.layout-02 .archive-filter {
   display: none; }
 .archive-city.layout-02 .col-left.no-maps .place-item {
@@ -5430,7 +5417,7 @@ a.place__comments__reply {
       right: 0;
       font-size: 12px;
       font-weight: 900;
-      font-family: 'Line Awesome Free'; }
+       }
   .filter-box h3.active:before {
     content: '\f106'; }
   .filter-box .field-check {
@@ -5443,7 +5430,7 @@ a.place__comments__reply {
     .filter-box .field-check label:before {
       vertical-align: -2px; }
   .filter-box .more {
-    font-family: Jost;
+
     font-size: 15px;
     font-weight: 500;
     color: #169bb9; }
@@ -5469,7 +5456,7 @@ a.place__comments__reply {
       font-weight: 500;
       line-height: 1.5;
       color: #2d2d2d;
-      font-family: "Jost"; }
+       }
     .main-primary .top-area .type {
       flex-grow: 1;
       text-align: center; }
@@ -5594,11 +5581,11 @@ a.place__comments__reply {
   right: 20px; }
 .place-thumb-sliders .slick-prev:before {
   content: '\f104';
-  font-family: "Line Awesome Free";
+  ;
   font-weight: 900; }
 .place-thumb-sliders .slick-next:before {
   content: '\f105';
-  font-family: "Line Awesome Free";
+  ;
   font-weight: 900; }
 .place-thumb-sliders .slick-prev:before,
 .place-thumb-sliders .slick-next:before {
@@ -5626,7 +5613,7 @@ a.place__comments__reply {
       font-weight: 500;
       color: #5d5d5d;
       cursor: pointer;
-      font-family: "Jost"; }
+       }
     .select-box .filter-control .list {
       background-color: #ffffff;
       border-radius: 5px;
@@ -5668,7 +5655,7 @@ a.place__comments__reply {
       content: '\f107';
       font-size: 12px;
       font-weight: 900;
-      font-family: "Line Awesome Free";
+      ;
       font-style: normal;
       right: 0;
       width: auto;
@@ -5774,7 +5761,7 @@ a.place__comments__reply {
     font-size: 16px;
     color: #169bb9;
     font-weight: 500;
-    font-family: "Jost";
+
     line-height: 37px;
     display: none; }
     .filterForm .filter-head .clear-filter i,
@@ -5832,7 +5819,7 @@ a.place__comments__reply {
   max-width: 400px; }
   .template-coming-soon .cs-info h1 {
     font-size: 58px;
-    font-family: "Jost-Semi";
+
     line-height: 1.28;
     color: #1a1a1a;
     margin-bottom: 10px; }
@@ -5872,18 +5859,18 @@ a.place__comments__reply {
   margin-right: 0; }
 
 .template-coming-soon.layout-2 .cs-info h1 {
-  font-family: "Jost"; }
+   }
   .template-coming-soon.layout-2 .cs-info h1 span {
     color: #169bb9; }
 .template-coming-soon.layout-2 .cs-info p {
   margin-bottom: 20px; }
 .template-coming-soon.layout-2 .cs-info b {
-  font-family: "Jost";
+
   font-size: 16px;
   font-weight: 500;
   color: #5d5d5d; }
 .template-coming-soon.layout-2 .cs-info a {
-  font-family: "Jost";
+
   color: #169bb9;
   font-size: 16px;
   font-weight: 500; }
@@ -5918,12 +5905,12 @@ a.place__comments__reply {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 30px 0; }
   .template-coming-soon.layout-2 .cs-day span {
-    font-family: "Jost";
+
     font-size: 58px;
     color: #2d2d2d;
     font-weight: 700; }
   .template-coming-soon.layout-2 .cs-day p {
-    font-family: "Jost";
+
     font-size: 18px;
     font-weight: 500; }
 
@@ -5971,13 +5958,13 @@ a.place__comments__reply {
   .pricing-item h3 {
     font-size: 24px;
     text-transform: uppercase;
-    font-family: "Jost";
+
     font-weight: 500;
     line-height: 1.58;
     margin-bottom: 10px; }
   .pricing-item .price {
     font-size: 48px;
-    font-family: "Jost";
+
     font-weight: 500;
     color: #2d2d2d;
     line-height: 42px;
@@ -6008,7 +5995,7 @@ a.place__comments__reply {
     -o-transform: rotate(-315deg);
     -ms-transform: rotate(-315deg);
     transform: rotate(-315deg);
-    font-family: "Jost";
+
     font-size: 18px;
     font-weight: 500;
     background-color: #169bb9;
@@ -6031,7 +6018,7 @@ a.place__comments__reply {
       font-weight: 500;
       line-height: 1.61;
       color: #2d2d2d;
-      font-family: "Jost"; }
+       }
 
 .package-review .pricing-item {
   padding: 50px 60px 40px; }
@@ -6112,7 +6099,7 @@ a.place__comments__reply {
   font-size: 15px;
   font-weight: 500;
   display: block;
-  font-family: "Jost";
+
   color: #2d2d2d; }
   .field-group label span.required {
     color: #e74807; }
@@ -6347,7 +6334,7 @@ a.place__comments__reply {
       font-size: 16px;
       color: #2d2d2d;
       font-weight: 700;
-      font-family: "Jost"; }
+       }
     .checkout-thanks-area .order-detail .pakage-name {
       text-transform: uppercase; }
   .checkout-thanks-area a.btn-print i {
@@ -6441,7 +6428,7 @@ a.place__comments__reply {
     font-weight: 500;
     text-transform: uppercase;
     color: #169bb9;
-    font-family: "Jost";
+
     position: relative; }
     .features-item a.more:after {
       content: '';
@@ -6471,7 +6458,7 @@ a.place__comments__reply {
 .home-header.home-header-while .right-header__login > a,
 .home-header.home-header-while .right-header__signup > a {
   color: #2d2d2d;
-  font-family: "Jost"; }
+   }
 .home-header.home-header-while .minicart__open > i {
   color: #2d2d2d; }
 .home-header.home-header-while .minicart__open > span {
@@ -6498,10 +6485,10 @@ a.place__comments__reply {
 .business-main.home-main .site-banner__content p {
   color: #2d2d2d; }
 .business-main.home-main .site-banner__content p {
-  font-family: "Jost-Book";
+
   font-weight: 400; }
   .business-main.home-main .site-banner__content p i {
-    font-family: "Jost"; }
+     }
 .business-main.home-main .site-banner:after {
   background-image: url(../images/bg_hero_bottom.svg);
   background-size: 110%;
@@ -6519,16 +6506,16 @@ a.place__comments__reply {
     box-shadow: inherit;
     padding: 0;
     color: #2d2d2d;
-    font-family: "Jost-Book"; }
+     }
     .site-banner__search.layout-02 .site-banner__search__input::placeholder {
       color: #8d8d8d;
-      font-family: "Jost-Book"; }
+       }
     .site-banner__search.layout-02 .site-banner__search__input:-ms-input-placeholder {
       color: #8d8d8d;
-      font-family: "Jost-Book"; }
+       }
     .site-banner__search.layout-02 .site-banner__search__input::-ms-input-placeholder {
       color: #8d8d8d;
-      font-family: "Jost-Book"; }
+       }
   .site-banner__search.layout-02 .field-input {
     display: flex;
     align-items: center;
@@ -6536,7 +6523,7 @@ a.place__comments__reply {
     position: relative; }
     .site-banner__search.layout-02 .field-input label {
       color: #2d2d2d;
-      font-family: "Jost";
+
       margin-right: 8px; }
     .site-banner__search.layout-02 .field-input input:focus {
       background-color: inherit !important;
@@ -6606,7 +6593,7 @@ a.place__comments__reply {
       .site-banner__search.layout-02 .search-suggestions li a {
         font-size: 16px;
         font-weight: 500;
-        font-family: "Jost";
+
         color: #2d2d2d;
         padding: 8px 25px;
         display: block; }
@@ -6633,7 +6620,7 @@ a.place__comments__reply {
   display: block;
   margin-bottom: 10px; }
 .bsn-cat-item span.title {
-  font-family: "Jost";
+
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
@@ -6828,7 +6815,7 @@ a.place__comments__reply {
     .testimonial-item.layout-02 .testimonial-info span {
       font-size: 16px;
       color: #9a9a9a;
-      font-family: "Jost-Book";
+
       margin-left: 20px; }
 
 .business-cat-slider .bsn-cat-item {
@@ -6859,7 +6846,7 @@ a.place__comments__reply {
     .business-about .business-about-info a.btn {
       background-color: #ffffff;
       color: #2d2d2d;
-      font-family: "Jost";
+
       font-size: 14px; }
     .business-about .business-about-info a.btn:hover {
       color: #169bb9; }
@@ -6895,16 +6882,16 @@ a.place__comments__reply {
     box-shadow: inherit;
     padding: 0;
     color: #2d2d2d;
-    font-family: "Jost-Book"; }
+     }
     .site-banner__search.layout-02 .site-banner__search__input::placeholder {
       color: #8d8d8d;
-      font-family: "Jost-Book"; }
+       }
     .site-banner__search.layout-02 .site-banner__search__input:-ms-input-placeholder {
       color: #8d8d8d;
-      font-family: "Jost-Book"; }
+       }
     .site-banner__search.layout-02 .site-banner__search__input::-ms-input-placeholder {
       color: #8d8d8d;
-      font-family: "Jost-Book"; }
+       }
   .site-banner__search.layout-02 .field-input {
     display: flex;
     align-items: center;
@@ -6912,7 +6899,7 @@ a.place__comments__reply {
     position: relative; }
     .site-banner__search.layout-02 .field-input label {
       color: #2d2d2d;
-      font-family: "Jost";
+
       margin-right: 8px; }
     .site-banner__search.layout-02 .field-input input:focus {
       background-color: inherit !important;
@@ -6982,7 +6969,7 @@ a.place__comments__reply {
       .site-banner__search.layout-02 .search-suggestions li a {
         font-size: 16px;
         font-weight: 500;
-        font-family: "Jost";
+
         color: #2d2d2d;
         padding: 3px 25px;
         display: block; }
@@ -7056,7 +7043,7 @@ a.place__comments__reply {
   .filter-group.filter-business .clear-filter {
     font-size: 15px;
     color: #169bb9;
-    font-family: "Jost";
+
     display: none; }
 
 .select-group .select-box {
@@ -7078,7 +7065,7 @@ a.place__comments__reply {
   .select-group .filter-control span {
     font-size: 15px;
     color: #2d2d2d;
-    font-family: "Jost"; }
+     }
 
 .filter.layout-02 .select-box .filter-control .list {
   margin-top: 5px;
@@ -7207,7 +7194,7 @@ a.place__comments__reply {
     margin-bottom: 6px; }
     .widget.widget-text p.info span {
       font-weight: 500;
-      font-family: "Jost"; }
+       }
   .widget.widget-text ul {
     margin-top: 25px; }
     .widget.widget-text ul li {
@@ -7224,9 +7211,9 @@ a.place__comments__reply {
     padding: 25px !important;
     margin-bottom: 25px; }
     .review-wrap li .place__author__info > a {
-      font-family: "Jost"; }
+       }
     .review-wrap li p > a {
-      font-family: "Jost";
+
       font-size: 16px;
       font-weight: 500;
       color: #169bb9; }
@@ -7239,14 +7226,14 @@ a.place__comments__reply {
     margin: 0 25px; }
     .landing-menu li a {
       font-size: 16px;
-      font-family: "Jost";
+
       font-weight: 500;
       height: 40px;
       line-height: 40px; }
 
 .header-landing.home-header.home-header-while .right-header__button a {
   color: #2d2d2d;
-  font-family: "Jost";
+
   font-weight: 500; }
 
 .header-landing .site__menu__icon {
@@ -7261,7 +7248,7 @@ a.place__comments__reply {
   .landing-page .site-banner__content a.btn {
     font-size: 15px;
     font-weight: 500;
-    font-family: "Jost";
+
     height: 60px;
     line-height: 60px;
     border-radius: 30px;
@@ -7271,9 +7258,9 @@ a.place__comments__reply {
     background-color: #169bb9; }
 .landing-page .site-banner__title {
   font-size: 48px;
-  font-family: "Jost"; }
+   }
   .landing-page .site-banner__title i {
-    font-family: "Jost-Semi";
+
     font-weight: 700;
     text-decoration: underline;
     line-height: 1.58; }
@@ -7290,7 +7277,7 @@ a.place__comments__reply {
   margin: 0 auto 60px; }
   .landing-title h2 {
     font-size: 48px;
-    font-family: "Jost-Semi";
+
     margin-bottom: 6px; }
   .landing-title p {
     font-size: 18px; }
@@ -7327,7 +7314,7 @@ a.place__comments__reply {
     text-transform: uppercase;
     font-size: 14px;
     color: #ffffff;
-    font-family: "Jost-Semi"; }
+     }
   .demo-item .demo-type.hot {
     background-color: #ef2107; }
   .demo-item .demo-type.new {
@@ -7338,7 +7325,7 @@ a.place__comments__reply {
   .landing-featured .features-item h3 {
     font-size: 36px; }
   .landing-featured .features-item p {
-    font-family: "Jost"; }
+     }
 
 .landing-title.title-desc-up p {
   margin-bottom: 10px; }
@@ -7417,7 +7404,7 @@ a.place__comments__reply {
   .landing-customers-item p {
     font-size: 16px;
     line-height: 1.56;
-    font-family: "Jost";
+
     margin-bottom: 22px; }
   .landing-customers-item .lci-content {
     min-height: 184px; }
@@ -7463,7 +7450,7 @@ a.place__comments__reply {
       background-color: transparent;
       color: #111111;
       font-size: 15px;
-      font-family: "Jost-Semi";
+
       padding: 0 40px; }
     .landing-customers .landing-customers-button a:hover {
       color: #ffffff;
@@ -7478,7 +7465,7 @@ a.place__comments__reply {
   .footer.layout-03 h2 {
     font-size: 48px;
     color: #ffffff;
-    font-family: "Jost-Semi";
+
     margin-bottom: 18px; }
   .footer.layout-03 p {
     font-size: 18px;
@@ -7491,7 +7478,7 @@ a.place__comments__reply {
     line-height: 60px;
     color: #111111;
     padding: 0 52px;
-    font-family: "Jost-Semi"; }
+     }
   .footer.layout-03 a.btn:hover {
     background-color: #ffffff; }
   .footer.layout-03 .footer__bottom {
@@ -7558,17 +7545,17 @@ a.place__comments__reply {
   .footer-subscribe input::placeholder {
     color: #8d8d8d;
     font-weight: 400;
-    font-family: "Jost-Book";
+
     font-size: 15px; }
   .footer-subscribe input:-ms-input-placeholder {
     color: #8d8d8d;
     font-weight: 400;
-    font-family: "Jost-Book";
+
     font-size: 15px; }
   .footer-subscribe input::-ms-input-placeholder {
     color: #8d8d8d;
     font-weight: 400;
-    font-family: "Jost-Book";
+
     font-size: 15px; }
 .footer-subscribe button {
   background-color: transparent;
@@ -7686,7 +7673,7 @@ a.place__comments__reply {
     color: #ffffff;
     font-size: 22px;
     vertical-align: -2px;
-    font-family: 'Line Awesome Free';
+
     font-weight: 900;
 }
 
