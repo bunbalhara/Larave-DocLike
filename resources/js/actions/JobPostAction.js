@@ -96,7 +96,7 @@ export const postRequest = () => async (dispatch, getState) => {
     if(res.success){
         let token = res.data.appointment.token;
         if(token){
-            window.location.href='http://book.doclike.localhost?bookid='+token;
+            window.location.href='https://book.doclike.fr?bookid='+token;
         }
         dispatch({type: JOB_POST_NEXT, payload:{activeStep: 9}})
         dispatch({type: SET_JOB_POST_SHOW_MAP, payload: true})
