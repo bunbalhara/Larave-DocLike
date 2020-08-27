@@ -83,9 +83,14 @@
                                     <div class="popup__destinations popup__box">
                                         <ul class="menu-arrow">
                                             <li>
-                                                <a title="Destinations" href="#">France</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="javascript:void(0)" title="France">France</a></li>
+                                                <a title="Destinations" href="#">
+                                                    {{__(session()->get('country',$default_country))}}
+                                                    <i class="la la-angle-down la-12"></i>
+                                                </a>
+                                                <ul>
+                                                    @foreach($countries as $country)
+                                                        <li><a href="{{url('/country/'.$country)}}" title="{{$country}}">{{__($country)}}</a></li>
+                                                    @endforeach
                                                 </ul>
                                             </li>
                                         </ul>
