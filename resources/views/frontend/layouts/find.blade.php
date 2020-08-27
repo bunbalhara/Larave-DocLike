@@ -74,7 +74,6 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     @stack('style')
 </head>
 <body dir="{{!setting('style_rtl') ?: 'rtl'}}" style="overflow-x: hidden">

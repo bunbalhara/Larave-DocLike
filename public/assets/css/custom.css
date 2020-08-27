@@ -912,3 +912,18 @@
     z-index: 10;
     pointer-events: none;
 }
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url("../../assets/fonts/lato.black.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Black-Italic';
+    src: url("../../assets/fonts/lato.black-italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url("../../assets/fonts/lato.regular.ttf") format('truetype');
+}
