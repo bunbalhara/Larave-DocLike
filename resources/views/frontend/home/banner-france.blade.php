@@ -1,5 +1,6 @@
+
 <section class="section-banner">
-    <div class="position-relative" style="min-height: 55vh; width: 100%; overflow: hidden">
+    <div class="position-relative" style="width: 100%; overflow: hidden">
         <img class="banner-image" src="{{asset('assets/images/banner_france.png')}}" alt="banner"/>
         <div class="banner-content">
             <div>

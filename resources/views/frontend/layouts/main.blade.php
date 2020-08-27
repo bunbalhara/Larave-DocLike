@@ -89,7 +89,7 @@
                                                 </a>
                                                 <ul>
                                                     @foreach($countries as $country)
-                                                        <li><a href="{{url('/country/'.$country)}}" title="{{$country}}">{{__($country)}}</a></li>
+                                                        <li><a href="{{url('/country/'.$country)}}" title="{{$country}}" style="text-transform: capitalize">{{__($country)}}</a></li>
                                                     @endforeach
                                                 </ul>
                                             </li>
@@ -152,7 +152,7 @@
                             </a>
                             <ul>
                                 @foreach($countries as $country)
-                                <li><a href="{{url('/country/'.$country)}}" title="{{$country}}">{{__($country)}}</a></li>
+                                <li><a href="{{url('/country/'.$country)}}" title="{{$country}}" style="text-transform: capitalize">{{__($country)}}</a></li>
                                 @endforeach
                             </ul>
                         </div><!-- .right-header__destinations -->
