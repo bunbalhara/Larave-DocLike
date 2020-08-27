@@ -17,6 +17,7 @@
     flex-direction: column;
     height: 100%;
     top: 0;
+    left: 0;
 }
 
 .banner-content .title{

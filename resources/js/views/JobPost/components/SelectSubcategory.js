@@ -20,52 +20,6 @@ const CategoryITem = ({item, active})=>{
 
     return(
         <>
-            <Hidden smDown>
-                <div
-                    className='d-flex justify-content-between align-items-center select-subcategory-item'
-                    style={{
-                        maxWidth: 500,
-                        width: '100%',
-                        borderRadius: 20,
-                        boxShadow:'0 0 2px 1px #8080803f',
-                        marginTop: 20,
-                        cursor:'pointer',
-                        backgroundColor:active?'#299acf':'white'
-                    }}
-                    onClick={setCategory}
-                >
-                    <div
-                        className='d-flex align-items-center flex-row justify-content-start p-lg-4 p-2'
-                    >
-                        <div className='ml-2'>
-                            <h5
-                                className='name'
-                                style={{
-                                    color: active?'white':'black'
-                                }}
-                            >
-                                {item.name}
-                            </h5>
-                            <span
-                                className='description'
-                                style={{
-                                    color: active?'white':'black'
-                                }}
-                            >
-                        {item.description}
-                    </span>
-                        </div>
-                    </div>
-                    <div className='d-flex justify-content-center align-items-center pr-lg-4 pr-2'>
-                        <NavigateNextIcon
-                            style={{
-                                color: active?'white':'black'
-                            }}
-                        />
-                    </div>
-                </div>
-            </Hidden>
-            <Hidden mdUp>
                 <div
                     className='select-subcategory-item'
                     style={{
@@ -93,7 +47,6 @@ const CategoryITem = ({item, active})=>{
                         </span>
                     </div>
                 </div>
-            </Hidden>
         </>
     )
 }

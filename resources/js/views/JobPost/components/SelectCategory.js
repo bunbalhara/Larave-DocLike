@@ -20,110 +20,54 @@ const CategoryITem = ({item, active})=>{
 
     return(
         <>
-            <Hidden smDown>
+            <div
+                className='category-item'
+                style={{
+                    width: 'max-content',
+                    borderRadius: 9999999,
+                    boxShadow:'0 0 2px 1px #8080803f',
+                    cursor:'pointer',
+                    padding:'2px 10px',
+                    marginTop: 15,
+                    backgroundColor:active?'#299acf':'white',
+                    marginRight: 10,
+                }}
+                onClick={setCategory}
+            >
                 <div
-                    className='d-flex justify-content-between align-items-center category-item'
-                    style={{
-                        width: '100%',
-                        maxWidth: 500,
-                        borderRadius: 20,
-                        boxShadow:'0 0 2px 1px #8080803f',
-                        marginTop: 20,
-                        cursor:'pointer',
-                        backgroundColor:active?'#299acf':'white'
-                    }}
-                    onClick={setCategory}
+                    className='d-flex align-items-center flex-row justify-content-start'
                 >
                     <div
-                        className='d-flex align-items-center flex-row justify-content-start p-lg-4 p-2'
+                        className='d-flex justify-content-center align-items-center'
+                        style={{
+                            width: 20,
+                            height: 20,
+                            borderRadius: 5,
+                            backgroundColor:item.color,
+                        }}
                     >
-                        <div
-                            className='d-flex justify-content-center align-items-center'
-                            style={{
-                                width: 50,
-                                height: 50,
-                                borderRadius: 10,
-                                backgroundColor:item.color,
-                            }}
-                        >
-                            <img src={item.image} alt={item.name}/>
-                        </div>
-                        <div className='ml-2'>
-                            <h5
-                                style={{
-                                    color: active?'white':'black'
-                                }}
-                                className='title'
-                            >
-                                {item.name}
-                            </h5>
-                            <span
-                                style={{
-                                    color: active?'white':'black'
-                                }}
-                            >
-                        {item.doctor.length} doctors
-                    </span>
-                        </div>
+                        <img src={item.image} alt={item.name}/>
                     </div>
-                    <div className='d-flex justify-content-center align-items-center pr-lg-4 pr-2'>
-                        <NavigateNextIcon
+                    <div className='ml-1'>
+                        <h5
                             style={{
                                 color: active?'white':'black'
                             }}
-                        />
-                    </div>
-                </div>
-            </Hidden>
-            <Hidden mdUp>
-                <div
-                    className='category-item'
-                    style={{
-                        width: 'max-content',
-                        borderRadius: 9999999,
-                        boxShadow:'0 0 2px 1px #8080803f',
-                        cursor:'pointer',
-                        padding:'2px 10px',
-                        marginTop: 15,
-                        backgroundColor:active?'#299acf':'white',
-                        marginRight: 10,
-                    }}
-                    onClick={setCategory}
-                >
-                    <div
-                        className='d-flex align-items-center flex-row justify-content-start'
-                    >
-                        <div
-                            className='d-flex justify-content-center align-items-center'
-                            style={{
-                                width: 20,
-                                height: 20,
-                                borderRadius: 5,
-                                backgroundColor:item.color,
-                            }}
+                            className='title'
                         >
-                            <img src={item.image} alt={item.name}/>
-                        </div>
-                        <div className='ml-1'>
-                            <h5
-                                style={{
-                                    color: active?'white':'black'
-                                }}
-                                className='title'
-                            >
-                                {item.name}
-                            </h5>
-                        </div>
+                            {item.name}
+                        </h5>
                     </div>
                 </div>
-            </Hidden>
+            </div>
         </>
     )
 }
 
 export const SelectCategory = () => {
 
-    const categories = useSelector(state=>state.jobPost.allCategories.filter(item=>item.parent === 0 && item.doctor.length > 0))
+    // const categories = useSelector(state=>state.jobPost.allCategories.filter(item=>item.parent === 0 && item.doctor.length > 0))
+    const categories = useSelector(state=>state.jobPost.allCategories.filter(item=>item.parent === 0))
     const category = useSelector(state=> state.jobPost.post.category)
     const [searchResult, setSearchResult] = React.useState(null);
     const handleChange = (e) => {
