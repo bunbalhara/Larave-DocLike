@@ -19,6 +19,16 @@ class Locale
      */
     public function handle($request, Closure $next)
     {
+
+        // countries
+        $countries = [
+            'france',
+            'israel'
+        ];
+
+        view()->share('countries', $countries);
+        view()->share('default_country', 'France');
+
         // Set config translatable.locales
         app()->setLocale(session()->get('locale', config('app.locale')));
         return $next($request);

@@ -142,11 +142,13 @@
 
                         <div class="right-header__destinations">
                             <a title="Destinations" href="#">
-                                Frnace
+                                {{__(session()->get('country',$default_country))}}
                                 <i class="la la-angle-down la-12"></i>
                             </a>
                             <ul>
-                                <li><a href="javascript:void(0)" title="France">France</a></li>
+                                @foreach($countries as $country)
+                                <li><a href="{{url('/country/'.$country)}}" title="{{$country}}">{{__($country)}}</a></li>
+                                @endforeach
                             </ul>
                         </div><!-- .right-header__destinations -->
                         @guest

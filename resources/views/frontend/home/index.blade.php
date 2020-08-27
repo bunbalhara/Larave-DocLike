@@ -6,20 +6,7 @@
 @endsection
 
 @section('main')
-    <section class="section-banner">
-        <div class="position-relative">
-            <img class="banner-image" src="{{asset('assets/images/banner.png')}}" alt="banner"/>
-            <div class="banner-content">
-                <div>
-                    <h1 class="title">{{__("Do not wait any longer at the Doctor")}}</h1>
-                    <p class="description">{{__("Like a Dentist available in Paris this morning")}}</p>
-                    <div class="pl-lg-5 pl-3">
-                        <a class="btn btn-danger rounded" href="https://find.doclike.fr" style="background-color: #c44034">{{__("Find a doctor")}}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('frontend.home.banner-'.session()->get('country', 'france'))
     <main class="w-100 d-flex flex-column align-items-center">
         <section class="section-category container">
             <div class="title">{{__("How it works")}}</div>

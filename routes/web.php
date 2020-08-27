@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/country/{country}', function ($country){
+   session()->put('country', $country);
+   return back();
+});
 
 Route::domain(config('app.app_domain_name'))->group(function (){
 

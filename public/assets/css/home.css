@@ -4,7 +4,7 @@
 .banner-image{
     width: 100%;
     height: auto;
-    min-height: 35vh;
+    margin-right: 0;
 }
 
 .banner-content{
@@ -21,17 +21,69 @@
 
 .banner-content .title{
     color: white;
-    font-size: 48px;
-    padding: 0!important;
+    font-size: 56px;
+    padding: 0 100px!important;
     margin: 0!important;
+    font-family: Lato-Black-Italic;
 }
 
 .banner-content .description{
     color: white;
     font-size: 24px;
-    padding: 20px 10px;
+    padding: 20px 100px;
     margin: 0!important;
+    font-family: Lato-Black-Italic;
 }
+
+.banner-content a{
+    background-color: #c44034;
+    font-family: Lato-Black-Italic;
+    border-radius: 100px!important;
+    padding: 0 50px;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+
+@media screen and (max-width: 1024px){
+    .banner-image{
+        width: 160%;
+        height: auto;
+        min-height: 55vh;
+        max-width: none;
+        margin-right: 0;
+        object-fit: cover;
+        transform: translateX(-50vw);
+    }
+
+
+    .banner-content div{
+        height: 70%;
+        text-align: center;
+        padding: 0;
+    }
+
+
+    .banner-content .title{
+        color: white;
+        padding: 0!important;
+        margin: 0!important;
+        font-family: Lato-Black-Italic;
+    }
+
+    .banner-content .description{
+        color: white;
+        font-size: 24px;
+        padding: 20px 10px;
+        margin: 0!important;
+        font-weight: 100;
+        font-family: Lato-Black-Italic;
+    }
+    .banner-content a{
+        margin: 0;
+    }
+}
+
 
 .section-category{
     text-align: center;
