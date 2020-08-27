@@ -70,16 +70,15 @@ iframe {
 
 h1 {
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
   vertical-align: baseline;
   clear: both;
   color: #2d2d2d;
-  font-family: "Jost";
   font-weight: 700;
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 h2 {
   border: 0;

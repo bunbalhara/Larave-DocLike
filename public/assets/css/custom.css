@@ -1,3 +1,23 @@
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url("../../assets/fonts/lato.black.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Black-Italic';
+    src: url("../../assets/fonts/lato.black-italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url("../../assets/fonts/lato.regular.ttf") format('truetype');
+}
+
+body * {
+    font-family: Lato;
+}
+
 .golo-add-to-wishlist .golo-loading {
     width: 25px;
     height: 25px;
@@ -220,7 +240,6 @@
 
 .golo-menu-filter ul.filter-control li.active a:after {
     content: '';
-    background-image: url(/assets/images/icon-close.svg);
     background-size: 10px 10px;
     background-repeat: no-repeat;
     background-position: center;
@@ -683,13 +702,11 @@
 .accordion a:after {
     content: "\f067";
     font-weight: 900;
-    font-family: 'Line Awesome Free';
 }
 
 .accordion li.open a:after {
     content: "\f068";
     font-weight: 900;
-    font-family: 'Line Awesome Free';
 }
 
 .city-slider .slick-nav i {
@@ -913,17 +930,3 @@
     pointer-events: none;
 }
 
-@font-face {
-    font-family: 'Lato-Black';
-    src: url("../../assets/fonts/lato.black.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: 'Lato-Black-Italic';
-    src: url("../../assets/fonts/lato.black-italic.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: 'Lato-Regular';
-    src: url("../../assets/fonts/lato.regular.ttf") format('truetype');
-}

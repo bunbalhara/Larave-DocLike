@@ -19,15 +19,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/lity/lity.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/gijgo/css/gijgo.min.css')}}"/>
 
-    @if(setting('style_rtl'))
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style-rtl.css?'.time())}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive-rtl.css?'.time())}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom-rtl.css?v=1.0')}}"/>
-    @else
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css?'.time())}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css?'.time())}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css?'.time())}}"/>
-    @endif
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css?'.time())}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css?'.time())}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css?'.time())}}"/>
 
     <link rel="icon" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
     <meta name="csrf-token" content="{{csrf_token()}}"/>

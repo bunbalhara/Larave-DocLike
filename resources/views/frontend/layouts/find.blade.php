@@ -17,16 +17,10 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/photoswipe/default-skin/default-skin.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/lity/lity.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/libs/gijgo/css/gijgo.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css?v=1.0')}}"/>
 
-    @if(setting('style_rtl'))
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style-rtl.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive-rtl.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom-rtl.css?v=1.0')}}"/>
-    @else
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom.css?v=1.0')}}"/>
-    @endif
 
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <style>
